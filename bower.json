@@ -1,0 +1,30 @@
+{
+  "name": "web-yasser",
+  "version": "2.0.0",
+  "homepage": "https://github.com/zabkasirna/web-yasser",
+  "authors": [
+    "rootapa/sirna"
+  ],
+  "description": "yasserrizky website",
+  "moduleType": [
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "yr"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  }
+}
