@@ -1,0 +1,14 @@
+{
+    "node": true,
+    "browser": true,
+    "devel": true,
+    "smarttabs": true,
+    "-W099": true,
+    "laxbreak": true,
+    "laxcomma": true,
+    "globals" : {
+        "d3" : true,
+        "Modernizr": true,
+        "jQuery": true
+    }
+}
