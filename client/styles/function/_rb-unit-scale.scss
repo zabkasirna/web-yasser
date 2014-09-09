@@ -1,0 +1,20 @@
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+@function x($values, $line-height: 24px, $pixel-base: 16px) {
+
+    $list: ();
+
+    @each $value in $values {
+        @if ($old) {
+            $list: append($list, ($value * $line-height));
+        }
+
+        @else {
+            $list: append($list, ($value * parseInt($line-height) / parseInt($pixel-base)) * 1rem );
+        }
+    }
+
+    @return $list();
+}

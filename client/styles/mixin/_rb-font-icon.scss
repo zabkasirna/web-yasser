@@ -1,0 +1,13 @@
+@mixin registration-icon($content) {
+    &:before {
+        content: "#{$content}";
+        font-family: 'FontAwesome';
+        color: $white;
+        display: block;
+        font-size: $p-font-size;
+        line-height: $p-line-height;
+        height: $p-line-height;
+        position: absolute;
+        bottom: 4px;
+    }
+}

@@ -1,0 +1,25 @@
+@mixin rb-mq($query:$feature $value) {
+
+    @if length($query) == 1 {
+        @media screen and (nth($query, 1)) {
+            @content;
+        }
+    }
+
+    @else if length($query) == 2 {
+        @media screen and (nth($query, 1): nth($query, 2)) {
+            @content;
+        }
+    }
+
+    @else if length($query) == 4 {
+        @media screen and (nth($query, 1): nth($query, 2)) and (nth($query, 3): nth($query, 4)) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Mixin media-query error. Wrong number of arguments.";
+    }
+
+}

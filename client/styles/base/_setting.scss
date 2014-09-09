@@ -1,0 +1,158 @@
+// ----------------------------------------------------------------------------\
+// Compass Typography.
+// ----------------------------------------------------------------------------/
+
+$base-font-size: 16px;
+$base-line-height: 24px;
+$default-rhythm-border-style: solid;
+$browser-default-font-size: 16px;
+$round-to-nearest-half-line: false;
+$min-line-padding: 2px !default;
+$font-unit: 1rem;
+$base-rhythm-unit: $base-line-height / $base-font-size * $font-unit;
+$base-leader: ($base-line-height - $base-font-size) * $font-unit / $base-font-size;
+$base-half-leader: $base-leader / 2;
+$base-border-radius: 2px;
+
+// ----------------------------------------------------------------------------\
+// Site Typography.
+// ----------------------------------------------------------------------------/
+
+$h1-font-size: 3.6875rem;
+$h1-line: 1.5rem;
+$h1-lines: 3;
+$h1-line-height: $h1-line * $h1-lines;
+$h1-margin-top: 2 * $h1-line;
+$h1-margin-bottom: 1 * $h1-line;
+
+$h2-font-size: 2.3125rem;
+$h2-line: 1.5rem;
+$h2-lines: 2;
+$h2-line-height: $h2-line * $h2-lines;
+$h2-margin-top: 2 * $h2-line;
+$h2-margin-bottom: 1 * $h2-line;
+
+$h3-font-size: 1.4375rem;
+$h3-line: 1.5rem;
+$h3-lines: 1;
+$h3-line-height: $h3-line * $h3-lines;
+$h3-margin-top: 1 * $h3-line;
+$h3-margin-bottom: 1 * $h3-line;
+
+$h4-font-size: 0.875rem;
+$h4-line: 1.5rem;
+$h4-lines: 1;
+$h4-line-height: $h4-line * $h4-lines;
+$h4-margin-top: 1 * $h4-line;
+$h4-margin-bottom: 1 * $h4-line;
+
+$h-fz: (
+  $h1-font-size,
+  $h2-font-size,
+  $h3-font-size,
+  $h4-font-size
+);
+
+$h-lh: (
+  $h1-line-height,
+  $h2-line-height,
+  $h3-line-height,
+  $h4-line-height
+);
+
+$h-mt: (
+  $h1-margin-top,
+  $h2-margin-top,
+  $h3-margin-top,
+  $h4-margin-top
+);
+
+$h-mb: (
+  $h1-margin-bottom,
+  $h2-margin-bottom,
+  $h3-margin-bottom,
+  $h4-margin-bottom
+);
+
+$p-font-size: 0.875rem;
+$p-line: 1.5rem;
+$p-lines: 1;
+$p-line-height: $p-line * $p-lines;
+$p-margin-top: 1 * $p-line;
+$p-margin-bottom: 1 * $p-line;
+
+// ----------------------------------------------------------------------------\
+// Site Form.
+// ----------------------------------------------------------------------------/
+
+$grid-gutter-width: $base-line-height;
+$legend-color: $black;
+$legend-border-color: $black;
+$padding-base-vertical: x(0.25);
+$padding-base-horizontal: x(0.5);
+$input-color: $grey;
+$input-bg: $white;
+$input-height-base: x(1.5);
+$input-border: $grey-3;
+$input-border-radius: $base-border-radius;
+$input-border-focus: $grey-1;
+$input-color-placeholder: $grey-2;
+$input-bg-disabled: $grey-3;
+
+$state-success-text: $green;
+$state-success-bg: $green-0;
+$state-success-border: $green;
+
+$state-info-text: $blue;
+$state-info-bg: $blue-0;
+$state-info-border: $blue;
+
+$state-warning-text: $orange;
+$state-warning-bg: $yellow-0;
+$state-warning-border: $orange;
+
+$state-danger-text: $red;
+$state-danger-bg: $red-0;
+$state-danger-border: $red;
+
+$state-error-text: $red;
+$state-error-bg: $red-0;
+$state-error-border: $red;
+
+$input-group-addon-bg: $grey-3;
+$input-group-addon-border-color: $input-border;
+
+// ----------------------------------------------------------------------------\
+// Site Form.
+// ----------------------------------------------------------------------------/
+
+$btn-font-weight: 400;
+$btn-default-color: $white;
+$btn-default-bg: $red;
+$btn-default-border: darken($btn-default-bg, 3%);
+$btn-primary-color: $white;
+$btn-primary-bg: $brand-c1;
+$btn-primary-border: darken($btn-primary-bg, 5%);
+$btn-success-color: $white;
+$btn-success-bg: $green;
+$btn-success-border: darken($btn-success-bg, 5%);
+$btn-info-color: $white;
+$btn-info-bg: $green;
+$btn-info-border: darken($btn-info-bg, 5%);
+$btn-warning-color: $white;
+$btn-warning-bg: $orange;
+$btn-warning-border: darken($btn-warning-bg, 5%);
+$btn-danger-color: $white;
+$btn-danger-bg: $red;
+$btn-danger-border: darken($btn-danger-bg, 5%);
+$btn-link-disabled-color: $grey;
+$link-hover-color: darken($link-color, 15%);
+
+// ----------------------------------------------------------------------------\
+// Site Size and layout.
+// ----------------------------------------------------------------------------/
+
+$container-home-medium: x(38.5);
+$container-home-reguler: x(48);
+
+$admin-medium: $container-home-reguler;

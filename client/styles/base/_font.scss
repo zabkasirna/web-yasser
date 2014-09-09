@@ -1,0 +1,26 @@
+$font-url: 'fonts/';
+
+@include rb-font-face( 'SansBold',       'Raleway-Bold',       $font-url, 700, normal );
+@include rb-font-face( 'SansExtraBold',  'Raleway-ExtraBold',  $font-url, 700, normal );
+@include rb-font-face( 'SansExtraLight', 'Raleway-ExtraLight', $font-url, 200, normal );
+@include rb-font-face( 'SansHeavy',      'Raleway-Heavy',      $font-url, 400, normal );
+@include rb-font-face( 'SansLight',      'Raleway-Light',      $font-url, 200, normal );
+@include rb-font-face( 'SansMedium',     'Raleway-Medium',     $font-url, 400, normal );
+@include rb-font-face( 'SansRegular',    'Raleway-Regular',    $font-url, 400, normal );
+@include rb-font-face( 'SansSemiBold',   'Raleway-SemiBold',   $font-url, 700, normal );
+@include rb-font-face( 'SansThin',       'Raleway-Thin',       $font-url, 200, normal );
+
+$ff-sans-bold:       SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-extrabold:  SansExtraBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-extralight: SansExtraLight, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-heavy:      SansHeavy, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-light:      SansLight, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-medium:     SansMedium, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-regular:    SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-semibold:   SansSemiBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-thin:       SansThin, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// @include rb-font-face( 'HeadingAlt', 'Campton-Light', $font-url, 400, normal );
+
+$ff-heading-alt:     'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $ff-brand-text:      'HeadingAlt', 'SansThin', Helvetica, Arial, sans-serif;

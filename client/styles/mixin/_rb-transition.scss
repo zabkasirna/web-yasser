@@ -1,0 +1,53 @@
+// Transition mixin
+// Modified from bourbon
+// Currently dependent with auto prefixer
+// Use with caution!
+
+@function transition-property-names($props, $vendor: false) {
+    $new-props: ();
+    
+    @each $prop in $props {
+        $new-props: append($new-props, transition-property-name($prop, $vendor), comma);
+    }
+
+    @return $new-props;
+}
+
+@function transition-property-name($prop, $vendor: false) {
+    @if $vendor and $prop == transform {
+        @return unquote('-'+$vendor+'-'+$prop);
+    }
+    @else {
+        @return $prop;
+    }
+}
+
+@mixin transition ($properties...) {
+    @if length($properties) >= 1 {
+        transition: $properties;
+    }
+
+    @else {
+        $properties: all 0.15s ease-out 0s;
+        transition: $properties;
+    }
+}
+
+@mixin transition-property ($properties...) {
+   -webkit-transition-property: transition-property-names($properties, 'webkit');
+      -moz-transition-property: transition-property-names($properties, 'moz');
+           transition-property: transition-property-names($properties, false);
+}
+
+@mixin transition-duration ($times...) {
+    transition-duration: $times;
+}
+
+// @arg $motions: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier()
+@mixin transition-timing-function ($motions...) {
+    transition-timing-function: $motions
+}
+
+@mixin transition-delay ($times...) {
+    transition-delay: $times
+}
