@@ -46,8 +46,6 @@ $old: false;
 @import "mixin/rb-font-icon";
 @import "mixin/rb-media-query";
 @import "mixin/rb-clearfix";
-@import "mixin/rb-button";
-@import "mixin/rb-form";
 @import "mixin/rb-transition";
 
 // ----------------------------------------------------------------------------\
@@ -62,5 +60,9 @@ $old: false;
 // Object.
 // ----------------------------------------------------------------------------/
 
-// @import "object/global/element";           // Require font & color to be defined
+@import "object/global/element";           // Require font & color to be defined
+@import "object/global/text";
 @import "object/background/background";
+@import "object/navigation/navigation";
+@import "object/brand/brand";
+@import "object/home/home";

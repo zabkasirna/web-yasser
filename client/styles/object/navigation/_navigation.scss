@@ -1,0 +1,45 @@
+#navigation {
+    position: absolute;
+    left: x(1);
+    top: x(7);
+    padding: x(1) 0;
+
+    text-transform: uppercase;
+    font-family: $ff-sans-bold;
+
+    // reset
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li, a {
+        margin: 0;
+        padding: 0;
+        font-family: inherit;
+        color: inherit;
+    }
+    a:hover { color: $red; }
+
+    .nav-1 {
+        @include clearfix;
+        display: block;
+        height: x(1);
+        a { font-size: 12px; }
+    }
+
+    .nav-2 {
+        @include transition(padding .2s linear .3s, max-height .5s ease-out);
+        max-height: 0;
+        padding: 0 x(.5);
+        background-color: rgba($black, 1);
+        color: $yellow;
+        overflow: hidden;
+        a { font-size: 11px; }
+    }
+
+    .open .nav-2 {
+        @include transition(max-height .5s ease-out .1s, padding .2s linear);
+        max-height: x(10);
+        padding: x(.25) x(.5);
+    }
+}

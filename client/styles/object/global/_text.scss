@@ -1,0 +1,172 @@
+// Reset typo.
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        font-family: $ff-sans-bold;
+        letter-spacing: -0.01em;
+        font-weight: 200;
+    }
+}
+
+@for $i from 1 through 6 {
+    h#{$i}.alt {
+        font-family: $ff-sans-regular;
+        letter-spacing: -1px;
+    }
+}
+
+p, li, b, strong, .bold, em, i, .italic {
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+}
+
+p, a, li {
+    font-family: $ff-sans-regular;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+b, strong, .bold {
+    font-family: $ff-sans-bold;
+    font-weight: 700;
+}
+
+em, i, .italic {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+// Heading.
+
+@for $i from 1 through 6 {
+    h#{$i} {
+        @if ($i > 4) {$i: 4;}
+        font-size: nth($h-fz, $i);
+        line-height: nth($h-lh, $i);
+        margin-top: nth($h-mt, $i);
+        margin-bottom: nth($h-mb, $i);
+
+        font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
+    }
+}
+
+// Paragraph.
+
+p {
+    font-size: $p-font-size;
+    line-height: $p-line-height;
+    letter-spacing: 0.03em;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+
+    & + & {
+        margin-top: $p-margin-top;
+    }
+
+    &:last-of-type {
+        margin-bottom: $p-margin-bottom;
+    }
+}
+
+// Link.
+a {
+    @include transition(color .3s ease-out, background-color .3s ease-out);
+    @include link-colors($black, $red, $black, $black, $black);
+    @include reset-box-model;
+
+    font-size: $p-font-size;
+    line-height: $p-line-height;
+
+    text-decoration: none;
+
+    &:hover, &:active, &:focus {
+        text-decoration: none;
+        outline: transparent none 0;
+    }
+}
+
+p a {
+    @include transition(background-image .3s ease-out);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to($red));
+    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,$red 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$red 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 90%;
+    // text-shadow: 1px 0 #FFF,2px 0 #FFF,-1px 0 #FFF,-2px 0 #FFF;
+
+    &:hover {
+        background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to($grey-3));
+        background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,$grey-3 50%);
+        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,$grey-3 50%);
+    }
+}
+
+// List.
+
+ul, ol {
+    font-size: $p-font-size;
+    line-height: $p-line-height;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &.no-reset {
+        list-style: disc outside none;
+    }
+
+    li {
+        margin: 0;
+        font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+    }
+}
+
+// Small
+
+small {
+    font-size: 10px;
+    line-height: $p-line-height;
+    color: inherit;
+}
+
+// Horizontal Rules.
+
+hr {
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0, 0, 0, 0)),to(darken($background-color,20%)));
+    background-image: -webkit-linear-gradient(top,rgba(0, 0, 0, 0) 50%,darken($background-color,20%) 50%);
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0) 50%,darken($background-color,20%) 50%);
+    background-repeat: repeat-x;
+    background-size: 2px 2px;
+    background-position: 0 50%;
+    border: 0;
+    padding-top: x(1);
+    padding-bottom: x(1);
+    margin: 0;
+}
+
+// Opentype classes.
+
+.small-caps {
+    font-size: r(1rem);
+    letter-spacing: r(0.1rem);
+    font-feature-settings: 'smcp' 1, 'kern' 1;
+}
+
+.lining-numerals {
+    font-feature-settings: 'lnum' 1, 'kern' 1;
+}
+
+.oldstyle-numerals {
+    font-feature-settings: 'onum' 1, 'kern' 1;
+}
+
+
+// Preformatted text
+
+pre, code {
+    font-family: monospace;
+}

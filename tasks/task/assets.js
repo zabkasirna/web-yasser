@@ -13,7 +13,7 @@ var gulp = require('gulp')
 gulp.task('assets', ['env'], function() {
     var c = global.configs || {};
 
-    return gulp.src([c.indir + c.assetdir + "**/*{png,jpg,gif,mp4,ogv,webm}"])
+    return gulp.src([c.indir + c.assetdir + "**/*{png,jpg,gif,svg,mp4,ogv,webm}"])
         .on('error', errors)
         .pipe(changed(c.outdir + c.assetdir))
         .pipe(gulp.dest(c.outdir + c.assetdir))

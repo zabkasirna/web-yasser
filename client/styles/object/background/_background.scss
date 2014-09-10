@@ -1,3 +1,4 @@
 .backgrounds {
     @include stretch;
+    z-index: -10;
 }

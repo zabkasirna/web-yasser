@@ -1,4 +1,4 @@
-@mixin rb-mq($query:$feature $value) {
+@mixin mq($query:$feature $value) {
 
     @if length($query) == 1 {
         @media screen and (nth($query, 1)) {

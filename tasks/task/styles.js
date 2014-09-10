@@ -23,11 +23,7 @@ var gulp          = require('gulp')
 gulp.task('styles:ie', ['env'], function() {
     var c = global.configs || {};
 
-    var sassOptions = {
-        // includePaths : [
-        //     c.outdir + 'vendor/sass-list-maps'
-        // ]
-    };
+    var sassOptions = {};
 
     return gulp.src(c.indir + c.styledir + "main.scss")
         .pipe(replace(/\$old\:\s*false;/g, function(str) {
@@ -45,21 +41,13 @@ gulp.task('styles:ie', ['env'], function() {
 gulp.task('styles:modern', ['env'], function() {
     var c = global.configs || {};
 
-    var sassOptions = {
-        // includePaths : [
-        //     c.outdir + 'vendor/sass-list-maps',
-        //     c.outdir + 'vendor/compass-mixin/lib',
-        //     c.outdir + 'vendor/bootstrap-sass-official/assets/stylesheets',
-        //     c.outdir + 'vendor/modernizr-mixin'
-        // ]
-    };
+    var sassOptions = {};
 
     return gulp.src(c.indir + c.styledir + "main.scss")
         .pipe(sass(sassOptions))
         .on('error', errors)
         .pipe(autoprefixer("last 2 versions", "> 1%", "ie 8"))
         .pipe(gulp.dest(c.outdir + c.styledir))
-        // .pipe(gulpif(c.isDev, reload))
         .pipe(size({ title: c.outdir + c.styledir + 'main.css' }))
     ;
 });
@@ -67,7 +55,7 @@ gulp.task('styles:modern', ['env'], function() {
 gulp.task('styles', function(done) {
     sequence(
         ['fonts'],
-        ['styles:modern', 'styles:ie'],
+        ['styles:modern', 'styles:old'],
         done
     );
 });

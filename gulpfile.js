@@ -9,27 +9,10 @@ var gulp     = require('gulp')
 ,   util     = require('gulp-util')
 ;
 
-// gulp.task('default', function(done) {
-//     sequence(
-//         ['env', 'images', 'favicon', 'styles', 'scripts'],
-//         ['watch'],
-//         done
-//     );
-// });
-
 gulp.task('default', function(done) {
     sequence(
-        ['env', 'assets', 'styles', 'scripts'],
-        ['views'],
+        ['env', 'assets', 'styles:quick', 'scripts', 'views'],
         ['watch'],
-        done
-    );
-});
-
-gulp.task('styleguide', function(done) {
-    sequence(
-        ['env', 'styles:quick'],
-        ['watch:styleguide'],
         done
     );
 });
