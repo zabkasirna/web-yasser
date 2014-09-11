@@ -13,11 +13,17 @@
     ,   uiHome       = require('./module/ui-home')
     ;
 
-    uiBackground.init($('video#background'));
+    uiBackground.init($('#background'));
+
+    console.log('background element:', uiBackground.element[0].nodeName);
+    console.log('background element:', uiBackground.element.length);
 
     $(window).on('resize', function() {
-        if ($('video#background').length) {
+        if (uiBackground.element.length && uiBackground.element[0].nodeName === "VIDEO") {
             debounce(uiBackground.rescaleVideo(), 250, true);
+        }
+        else if (uiBackground.element.length && uiBackground.element[0].nodeName === "IMG") {
+            debounce(uiBackground.rescaleImage(), 250, true);
         }
     });
 
