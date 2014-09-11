@@ -35,9 +35,10 @@
         -->
     </head>
     <body>
-        <div class="backgrounds"
-             data-vide-bg="assets/videos/Y" data-vide-options="loop: true, muted: false, position: 0% 0%"
-        ></div>
+        <video id="background" autoplay loop poster="assets/videos/Y.png" preload="none">
+            <source src="assets/videos/Y.webm" type="video/webm"></source>
+            <source src="assets/videos/Y.mp4" type="video/mp4"></source>
+        </video>
         <div id="brands">
             <object class="brand-svg" data="assets/images/brand/logo.svg" type="image/svg+xml">Y</object>
         </div>
