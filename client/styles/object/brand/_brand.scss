@@ -7,4 +7,11 @@
     .brand-svg {
         height: 100%;
     }
+
+    .has-color {
+        @include transition(fill .3s ease-out);
+    }
+
+    &.background--light { .has-color { fill: #000; } }
+    &.background--dark  { .has-color { fill: #FFF; } }
 }
