@@ -1922,6 +1922,21 @@ hr {
 pre, code {
   font-family: monospace; }
 
+#page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 4000;
+  overflow: scroll; }
+  #page:before, #page:after {
+    content: " ";
+    display: table; }
+  #page:after {
+    clear: both; }
+
 .background {
   position: fixed;
   top: 0;
@@ -1953,6 +1968,7 @@ video.background {
   left: 1.5rem;
   top: 10.5rem;
   padding: 1.5rem 0;
+  z-index: 5000;
   text-transform: uppercase;
   font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   #navigation ul {
@@ -2001,7 +2017,8 @@ video.background {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  height: 9rem; }
+  height: 9rem;
+  z-index: 6000; }
   #brands .brand-svg {
     height: 100%; }
   #brands .has-color {
@@ -2011,6 +2028,66 @@ video.background {
     fill: #000; }
   .dark #brands .has-color, #brands.background--dark .has-color {
     fill: #FFF; }
+
+.thumbs {
+  position: relative;
+  border-top: 1px solid #F2F2F2;
+  top: -1px;
+  float: right; }
+  .thumbs:before, .thumbs:after {
+    content: " ";
+    display: table; }
+  .thumbs:after {
+    clear: both; }
+
+.thumb {
+  padding: 0.375rem 0;
+  float: left; }
+  .thumb:before, .thumb:after {
+    content: " ";
+    display: table; }
+  .thumb:after {
+    clear: both; }
+
+.thumb-images, .thumb-texts {
+  width: 15rem;
+  height: 7.5rem;
+  float: left;
+  margin: 0 0.375rem;
+  position: relative;
+  overflow: hidden; }
+  .thumb-images:before, .thumb-images:after, .thumb-texts:before, .thumb-texts:after {
+    content: " ";
+    display: table; }
+  .thumb-images:after, .thumb-texts:after {
+    clear: both; }
+
+.thumb-text {
+  text-transform: uppercase; }
+  .thumb-text .thumb-title {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: #F2F2F2;
+    letter-spacing: 0.1em; }
+  .thumb-text .thumb-subtitle {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    color: #F2F2F2; }
+
+.thumb-image {
+  display: block;
+  height: 7.5rem;
+  width: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin: 0 0 0 -132px; }
 
 #home-heros {
   display: table;

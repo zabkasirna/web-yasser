@@ -62,7 +62,9 @@ $old: false;
 
 @import "object/global/element";           // Require font & color to be defined
 @import "object/global/text";
+@import "object/container/container";
 @import "object/background/background";
 @import "object/navigation/navigation";
 @import "object/brand/brand";
+@import "object/thumb/thumb";
 @import "object/home/home";

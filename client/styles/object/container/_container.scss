@@ -1,0 +1,7 @@
+#page {
+    @include stretch;
+    @include clearfix;
+    padding: x(1);
+    z-index: 4000;
+    overflow: scroll;
+}
