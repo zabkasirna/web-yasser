@@ -12,6 +12,12 @@
         @include transition(fill .3s ease-out);
     }
 
-    &.background--light { .has-color { fill: #000; } }
-    &.background--dark  { .has-color { fill: #FFF; } }
+    .light &,
+    &.background--light {
+        .has-color { fill: #000; } 
+    }
+    .dark &,
+    &.background--dark {
+        .has-color { fill: #FFF; } 
+    }
 }

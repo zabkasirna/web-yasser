@@ -2004,9 +2004,9 @@ video.background {
   #brands .has-color {
     -webkit-transition: fill 0.3s ease-out;
             transition: fill 0.3s ease-out; }
-  #brands.background--light .has-color {
+  .light #brands .has-color, #brands.background--light .has-color {
     fill: #000; }
-  #brands.background--dark .has-color {
+  .dark #brands .has-color, #brands.background--dark .has-color {
     fill: #FFF; }
 
 #home-heros {
