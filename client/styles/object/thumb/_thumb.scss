@@ -1,29 +1,29 @@
 .thumbs {
     @include clearfix;
-    position: relative;
+    position: absolute;
+    bottom: x(1);
+    right: x(1);
     border-top: 1px solid $white;
-    top: -1px;
     float: right;
-    // background-color: rgba(#ccc, .3);
+    width: r(49rem);
+    height: r(27rem);
 }
 
 .thumb {
     @include clearfix;
-    // width: x(21);
-    // height: x(5.5);
-    // background-color: rgba(#ccc, .3);
     padding: x(.25) 0;
     float: left;
+
+    &:nth-child(2n+1) { margin: 0 r(.5rem) 0 0; }
+    &:nth-child(2n)   { margin: 0 0 0 r(.5rem); }
 }
 
 .thumb-images,
 .thumb-texts {
     @include clearfix;
-    width: x(10);
-    height: x(5);
+    width: r(12rem);
+    height: r(6rem);
     float: left;
-    // background-color: rgba(#C00, .3);
-    margin: 0 x(0.25);
     position: relative;
     overflow: hidden;
 }
@@ -52,10 +52,10 @@
 
 .thumb-image {
     display: block;
-    height: x(5);
+    height: r(6rem);
     width: auto;
     position: absolute;
     top: 0;
     left: 50%;
-    margin: 0 0 0 -132px;
+    margin: 0 0 0 -106px;
 }
