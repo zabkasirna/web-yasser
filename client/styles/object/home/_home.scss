@@ -88,8 +88,8 @@
 
             object {
                 @include transition(transform .3s ease-out);
+                pointer-events: none;
                 transform: rotate(0deg);
-                user-select: none;
             }
         }
 

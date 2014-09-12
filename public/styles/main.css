@@ -1995,6 +1995,9 @@ video.background {
   color: #F2F2F2; }
 
 #brands {
+  display: block;
+  text-decoration: none;
+  margin: 0;
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
@@ -2103,13 +2106,10 @@ video.background {
       .home-hero-body .home-hero-togglers .home-hero-toggler object {
         -webkit-transition: -webkit-transform 0.3s ease-out;
                 transition: transform 0.3s ease-out;
+        pointer-events: none;
         -webkit-transform: rotate(0deg);
             -ms-transform: rotate(0deg);
-                transform: rotate(0deg);
-        -webkit-user-select: none;
-           -moz-user-select: none;
-            -ms-user-select: none;
-                user-select: none; }
+                transform: rotate(0deg); }
     .home-hero-body .home-hero-togglers .icon {
       display: block;
       width: 100%;
