@@ -1,0 +1,90 @@
+#body {
+    background: #666;
+    font-family: "Open Sans","Helvetice Neue",Helvetice,Arial,Sans-serif;
+    font-size: 9px;
+    line-height: 2em;
+}
+
+.page-navigation {
+    line-height: 14px;
+    position: absolute;
+    padding: 0;
+    background: none;
+    border: 1px solid black;
+}
+
+.info {
+    width:90px;
+    background: yellow;
+    border-right: 1px solid black;
+}
+
+.show {
+    background: url(../assets/btn-info.png) 0 0 no-repeat;
+    line-height: 14px;
+    padding: 0 0 0 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+}
+
+/* yang ada dihalaman werk utama */
+.page-navigation-project {
+    line-height: 14px;
+    position: absolute;
+    padding: 0;
+    background: none;
+    border: 1px solid white;
+}
+
+.info-project {
+    width:90px;
+    background: yellow;
+    border-right: 1px solid white;
+}
+
+.project {
+    /*background: url(../assets/btn-info.png) 0 0 no-repeat;*/
+    background: url(../assets/down-arrow.png) 0 0 no-repeat;
+    line-height: 14px;
+    padding: 0 0 0 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: left;
+}
+/* end of werk utama */
+
+.hide {
+    display: none;
+}
+
+.fullscreen {   
+
+}
+
+.page-selector {
+    width: 400px;
+    position: relative;
+    float: left;
+    border: none;
+}
+
+.page-selector .navigation {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    width: 35px;
+    height: 14px;
+}
+
+.page-selector .prev {
+    left: 0;
+    background: url(../assets/arrow-left-white.png) center center no-repeat;
+}
+
+.page-selector .next {
+    right: 0;
+    background: url(../assets/arrow-right-white.png) center center no-repeat;
+}
