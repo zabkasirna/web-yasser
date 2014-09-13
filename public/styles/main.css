@@ -2055,6 +2055,8 @@ video.background {
     margin: 0 0.5rem 0 0; }
   .thumb:nth-child(2n) {
     margin: 0 0 0 0.5rem; }
+  .thumb:hover {
+    background-color: rgba(255, 0, 0, 0.2); }
 
 .thumb-images, .thumb-texts {
   width: 12rem;

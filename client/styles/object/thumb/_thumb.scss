@@ -16,6 +16,8 @@
 
     &:nth-child(2n+1) { margin: 0 r(.5rem) 0 0; }
     &:nth-child(2n)   { margin: 0 0 0 r(.5rem); }
+
+    &:hover { background-color: rgba($red, .2); }
 }
 
 .thumb-images,

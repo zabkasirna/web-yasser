@@ -14,22 +14,21 @@
     ,   uiHome       = require('./module/ui/ui-home')
     ;
 
-    uiBackground.init($('.background'));
-
     setTimeout(function() {
         console.log('colorized');
         uiColor.init();
     }, 100);
 
-    console.log('background element:', uiBackground.element[0].nodeName);
-    console.log('background element:', uiBackground.element.length);
+    uiBackground.init($('.background'));
 
     $(window).on('resize', function() {
-        if (uiBackground.element.length && uiBackground.element[0].nodeName === "VIDEO") {
-            debounce(uiBackground.rescaleVideo(), 250, true);
-        }
-        else if (uiBackground.element.length && uiBackground.element[0].nodeName === "IMG") {
-            debounce(uiBackground.rescaleImage(), 250, true);
+        if (uiBackground.element.length) {
+            if (uiBackground.element[0].nodeName === "VIDEO") {
+                debounce(uiBackground.rescaleVideo(), 250, true);
+            }
+            else if (uiBackground.element[0].nodeName === "IMG") {
+                debounce(uiBackground.rescaleImage(), 250, true);
+            }
         }
     });
 
