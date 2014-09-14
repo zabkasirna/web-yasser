@@ -5,6 +5,11 @@
     padding: x(1) 0;
     z-index: 5000;
 
+    // Dafault value,
+    // will be replaced dynamically
+    // will be inherited
+    color: $black;
+
     text-transform: uppercase;
     font-family: $ff-sans-bold;
 
@@ -45,4 +50,5 @@
     }
 }
 
-#dark #navigation { color: $white; }
+#navigation.background--light { color: $black; }
+#navigation.background--dark  { color: $white; }

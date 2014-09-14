@@ -21,7 +21,7 @@
     if ($('.background').length) uiBackground.init($('.background'));
 
     $(window).on('resize', function() {
-        uiBackground.rescaleImage();
+        if ($('.background').length) uiBackground.rescaleImage();
     });
 
     var $navs = $('#navigation');

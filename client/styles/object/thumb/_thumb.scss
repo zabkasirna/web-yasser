@@ -3,10 +3,11 @@
     position: absolute;
     bottom: x(1);
     right: x(1);
-    border-top: 1px solid $white;
     float: right;
     width: r(49rem);
-    height: r(27rem);
+    height: r(20rem);
+
+    border-top: 1px solid $black;
 }
 
 .thumb {
@@ -14,10 +15,11 @@
     padding: x(.25) 0;
     float: left;
 
+    // Default value, will be inherited
+    color: $black;
+
     &:nth-child(2n+1) { margin: 0 r(.5rem) 0 0; }
     &:nth-child(2n)   { margin: 0 0 0 r(.5rem); }
-
-    &:hover { background-color: rgba($red, .2); }
 }
 
 .thumb-images,
@@ -30,25 +32,38 @@
     overflow: hidden;
 }
 
+.thumb-texts {
+    // Will be inherited
+    font-size: r(.75rem);
+    line-height: r(1rem);
+
+    // Dynamic styles, will be inherited
+    &.background--light { color: $black; }
+    &.background--dark  { color: $white; }
+}
+
 .thumb-text {
     text-transform: uppercase;
 
+    // Element reset
+    &,
+    .thumb-title,
+    .thumb-subtitle {
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
+    }
+
     .thumb-title {
-        font-size: r(.75rem);
-        line-height: r(1rem);
         font-family: $ff-sans-bold;
         font-weight: 700;
         margin: 0;
-        color: $white;
         letter-spacing: 0.1em;
     }
     .thumb-subtitle {
-        font-size: r(.75rem);
-        line-height: r(1rem);
         font-family: $ff-sans-regular;
         font-weight: 700;
         margin: 0;
-        color: $white;
     }
 }
 

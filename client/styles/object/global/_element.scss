@@ -36,5 +36,5 @@ body {
     height: 100%;
     color: $black;
     font-family: $ff-sans-regular;
-    background-color: $white;
+    background-color: darken($white, 20%);
 }
