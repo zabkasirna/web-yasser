@@ -33,10 +33,9 @@
         <script src="vendor/modernizr/modernizr.js"></script>
     </head>
     <body class="light">
-        <video class="background" autoplay loop poster="assets/videos/Y.png" preload="none">
-            <source src="assets/videos/Y.webm" type="video/webm"></source>
-            <source src="assets/videos/Y.mp4" type="video/mp4"></source>
-        </video>
+        <!-- <div class="backgrounds"> -->
+            <img src="assets/videos/Y.png" class="background full-height" data-video="assets/videos/Y" >
+        <!-- </div> -->
 
         <a href="/" id="brands">
             <svg version="1.1"
@@ -119,8 +118,16 @@
                 </div>
             </div>
         </div>
+
+        <div id="preloaders"></div>
+
         <script src="vendor/jquery/dist/jquery.js"></script>
-        <script src="vendor/vide/dist/jquery.vide.js"></script>
+        <script src="vendor/jquery-ui/jquery-ui.js"></script>
+        <script src="vendor/eventie/eventie.js"></script>
+        <script src="vendor/eventEmitter/EventEmitter.js"></script>
+        <script src="vendor/imagesloaded/imagesloaded.js"></script>
+        <script src="vendor/video.js/dist/video-js/video.js"></script>
+        <script src="vendor/BigVideo.js/lib/bigvideo.js"></script>
         <script src="vendor/backgroundCheck/background-check.js"></script>
         <script src="scripts/main.js"></script>
     </body>

@@ -15,21 +15,13 @@
     ;
 
     setTimeout(function() {
-        console.log('colorized');
         uiColor.init();
     }, 100);
 
-    uiBackground.init($('.background'));
+    if ($('.background').length) uiBackground.init($('.background'));
 
     $(window).on('resize', function() {
-        if (uiBackground.element.length) {
-            if (uiBackground.element[0].nodeName === "VIDEO") {
-                debounce(uiBackground.rescaleVideo(), 250, true);
-            }
-            else if (uiBackground.element[0].nodeName === "IMG") {
-                debounce(uiBackground.rescaleImage(), 250, true);
-            }
-        }
+        uiBackground.rescaleImage();
     });
 
     var $navs = $('#navigation');

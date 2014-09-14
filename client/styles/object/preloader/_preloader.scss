@@ -1,0 +1,18 @@
+#preloaders {
+    @include transition(background-color 1s ease-out);
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 9000;
+
+    background-color: #FFF;
+
+    &.page-loaded {
+        background-color: rgba(#FFF, 0);
+        pointer-events: none;
+    }
+}

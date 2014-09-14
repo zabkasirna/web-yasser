@@ -1937,17 +1937,28 @@ pre, code {
   #page:after {
     clear: both; }
 
+#preloaders {
+  -webkit-transition: background-color 1s ease-out;
+          transition: background-color 1s ease-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 9000;
+  background-color: #FFF; }
+  #preloaders.page-loaded {
+    background-color: rgba(255, 255, 255, 0);
+    pointer-events: none; }
+
 .background {
   position: fixed;
   top: 0;
-  left: 0;
-  z-index: -10; }
-
-.background-hack {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -100; }
+  left: 0; }
+  .background.video-loaded {
+    opacity: 0; }
 
 video.background {
   min-width: 100%;
@@ -1962,6 +1973,13 @@ video.background {
 
 .background.full-height {
   height: 100%; }
+
+/* @todo: move to it own file */
+#big-video-wrap *[class^="vjs"]:not(.vjs-tech) {
+  display: none !important; }
+
+#big-video-wrap .vjs-tech {
+  z-index: -1337 !important; }
 
 #navigation {
   position: absolute;

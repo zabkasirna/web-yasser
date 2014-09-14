@@ -2,17 +2,10 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: -10;
+    &.video-loaded {
+        opacity: 0;
+    }
 }
-
-.background-hack {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -100;
-}
-
-img.background {}
 
 video.background {
     min-width: 100%;
@@ -25,3 +18,8 @@ video.background {
 
 .background.full-width { width: 100%; }
 .background.full-height { height: 100%; }
+
+
+/* @todo: move to it own file */
+#big-video-wrap *[class^="vjs"]:not(.vjs-tech) { display: none !important; }
+#big-video-wrap .vjs-tech { z-index: -1337 !important; }
