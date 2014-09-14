@@ -2122,6 +2122,8 @@ video.background {
   .info-btns .info-btn-togglers.background--light .info-btn-toggler:nth-child(2) {
     border-color: #000; }
 
+.page-selectors a, .page-selectors li {
+  color: inherit; }
 .page-selectors .page-selector {
   position: relative;
   display: block;
@@ -2155,6 +2157,10 @@ video.background {
   .page-selectors .page-selector-link:hover {
     background-color: #FC0;
     color: #000; }
+.page-selectors.background--light {
+  color: #000; }
+.page-selectors.background--dark {
+  color: #F2F2F2; }
 
 #brands {
   display: block;
@@ -2181,13 +2187,23 @@ video.background {
   right: 1.5rem;
   float: right;
   width: 49rem;
-  height: 20rem;
-  border-top: 1px solid #000; }
+  height: 20rem; }
   .thumbs:before, .thumbs:after {
     content: " ";
     display: table; }
   .thumbs:after {
     clear: both; }
+
+.thumb-deco {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #F2F2F2; }
+  .thumb-deco.background--light {
+    background-color: #000; }
+  .thumb-deco.background--dark {
+    background-color: #F2F2F2; }
 
 .thumb {
   padding: 0.375rem 0;

@@ -118,6 +118,11 @@ $info-btns-width: x(9);
 }
 
 .page-selectors {
+    // reset element
+    a, li {
+        color: inherit;
+    }
+
     .page-selector {
         position: relative;
         display: block;
@@ -150,4 +155,7 @@ $info-btns-width: x(9);
 
         &:hover { background-color: $yellow; color: $black; }
     }
+
+    &.background--light { color: $black; }
+    &.background--dark  { color: $white; }
 }
