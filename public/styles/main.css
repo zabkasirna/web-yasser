@@ -2214,9 +2214,9 @@ video.background {
     display: table; }
   .thumb:after {
     clear: both; }
-  .thumb:nth-child(2n+1) {
+  .thumb:nth-of-type(2n) {
     margin: 0 0.5rem 0 0; }
-  .thumb:nth-child(2n) {
+  .thumb:nth-of-type(2n+1) {
     margin: 0 0 0 0.5rem; }
 
 .thumb-images, .thumb-texts {
@@ -2234,10 +2234,6 @@ video.background {
 .thumb-texts {
   font-size: 0.75rem;
   line-height: 1rem; }
-  .thumb-texts.background--light {
-    color: #000; }
-  .thumb-texts.background--dark {
-    color: #F2F2F2; }
 
 .thumb-text {
   text-transform: uppercase; }
@@ -2245,6 +2241,10 @@ video.background {
     font-size: inherit;
     line-height: inherit;
     color: inherit; }
+  .thumb-text .thumb-title.background--light, .thumb-text .thumb-subtitle.background--light {
+    color: #000; }
+  .thumb-text .thumb-title.background--dark, .thumb-text .thumb-subtitle.background--dark {
+    color: #F2F2F2; }
   .thumb-text .thumb-title {
     font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
