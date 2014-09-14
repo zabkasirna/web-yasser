@@ -30,7 +30,7 @@ $page-navigation-height: x(1);
 
 $info-btns-togglers-width: x(1);
 $info-btns-texts-width: x(8);
-$info-btns-width: $info-btns-togglers-width + $info-btns-texts-width;
+$info-btns-width: x(9);
 
 .page-navigation {
     // Element reset
@@ -42,8 +42,15 @@ $info-btns-width: $info-btns-togglers-width + $info-btns-texts-width;
     }
 
     .info-btns {
+        float: left;
         width: $info-btns-width;
         height: $page-navigation-height;
+        overflow: hidden;
+    }
+
+    .page-selectors {
+        float: left;
+        width: x(8);
         overflow: hidden;
     }
 }
@@ -107,5 +114,40 @@ $info-btns-width: $info-btns-togglers-width + $info-btns-texts-width;
         // Dynamic border color
         &.background--dark { .info-btn-toggler:nth-child(2) { border-color: $white; } }
         &.background--light { .info-btn-toggler:nth-child(2) { border-color: $black; } }
+    }
+}
+
+.page-selectors {
+    .page-selector {
+        position: relative;
+        display: block;
+        float: left;
+        width: x(1);
+        height: x(1);
+        text-transform: uppercase;
+
+        &.next { float: right; }
+    }
+
+    .icon {
+        display: block;
+        width: 80%;
+        height: 1.5rem;
+        pointer-events: none;
+    }
+
+    .page-selector.prev .icon { transform: rotate(90deg); }
+    .page-selector.next .icon { transform: rotate(-90deg); }
+
+    .page-selector-link {
+        display: block;
+        height: x(1);
+        width: x(1);
+        line-height: x(1);
+        padding: 0 4px;
+        font-size: 10px;
+        text-align: center;
+
+        &:hover { background-color: $yellow; color: $black; }
     }
 }

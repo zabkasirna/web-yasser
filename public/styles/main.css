@@ -2070,8 +2070,13 @@ video.background {
   font-family: inherit;
   letter-spacing: inherit; }
 .page-navigation .info-btns {
-  width: 1.5rem12rem;
+  float: left;
+  width: 13.5rem;
   height: 1.5rem;
+  overflow: hidden; }
+.page-navigation .page-selectors {
+  float: left;
+  width: 12rem;
   overflow: hidden; }
 
 .info-btns .info-btn-icons {
@@ -2116,6 +2121,40 @@ video.background {
     border-color: #F2F2F2; }
   .info-btns .info-btn-togglers.background--light .info-btn-toggler:nth-child(2) {
     border-color: #000; }
+
+.page-selectors .page-selector {
+  position: relative;
+  display: block;
+  float: left;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-transform: uppercase; }
+  .page-selectors .page-selector.next {
+    float: right; }
+.page-selectors .icon {
+  display: block;
+  width: 80%;
+  height: 1.5rem;
+  pointer-events: none; }
+.page-selectors .page-selector.prev .icon {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+.page-selectors .page-selector.next .icon {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg); }
+.page-selectors .page-selector-link {
+  display: block;
+  height: 1.5rem;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 4px;
+  font-size: 10px;
+  text-align: center; }
+  .page-selectors .page-selector-link:hover {
+    background-color: #FC0;
+    color: #000; }
 
 #brands {
   display: block;
