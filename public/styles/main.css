@@ -2130,7 +2130,7 @@ video.background {
   position: relative;
   display: block;
   float: left;
-  width: 1.5rem;
+  min-width: 1.5rem;
   height: 1.5rem;
   text-transform: uppercase; }
   .page-selectors .page-selector.next {
@@ -2432,9 +2432,140 @@ video.background {
     border-color: #F2F2F2; }
   #wordings .wording-footer {
     font-size: 0.8rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-top: 18px solid #F2F2F2;
     padding: 0.75rem 0;
     text-align: right; }
+
+#contacts {
+  float: left;
+  width: 17%;
+  min-height: 100%;
+  display: table; }
+  #contacts:before, #contacts:after {
+    content: " ";
+    display: table; }
+  #contacts:after {
+    clear: both; }
+  #contacts p, #contacts a {
+    font-size: inherit;
+    line-height: inherit; }
+  #contacts .contact {
+    display: table-cell;
+    vertical-align: bottom;
+    padding: 0.45rem; }
+  #contacts .contact > *:not(:first-child), #contacts .contact > *:not(:last-child) {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    padding: 0 0.375rem; }
+  #contacts .contact > *:first-child, #contacts .contact > *:last-child {
+    border: 1px solid white; }
+  #contacts .contact > *:first-child {
+    border-bottom: none;
+    padding: 0.75rem 0.375rem 1rem; }
+  #contacts .contact > *:last-child {
+    border-top: none;
+    padding: 0 0.375rem; }
+  #contacts .contact-email {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    text-decoration: underline; }
+    #contacts .contact-email a {
+      background-image: none; }
+  #contacts p {
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    margin: 0; }
+  #contacts .contact-credit {
+    background-color: #FC0;
+    margin: 0; }
+  #contacts .yasser-rizky {
+    letter-spacing: 0.33em;
+    font-weight: bold; }
+
+#texts {
+  float: right;
+  width: 16%;
+  min-height: 100%;
+  display: table; }
+  #texts:before, #texts:after {
+    content: " ";
+    display: table; }
+  #texts:after {
+    clear: both; }
+  #texts p {
+    font-size: 0.71rem;
+    line-height: 1.2rem;
+    padding: 1rem 0;
+    margin: 0;
+    color: inherit; }
+  #texts .text {
+    display: table-cell;
+    vertical-align: middle; }
+  #texts strong {
+    color: inherit; }
+  #texts .text-body {
+    text-transform: uppercase;
+    color: #F2F2F2; }
+
+#page-names {
+  border: 1px solid black;
+  position: absolute;
+  left: 50%;
+  bottom: 1.995rem;
+  margin: 0 0 0 -106px;
+  width: 212px;
+  height: 1.5rem; }
+  #page-names:before, #page-names:after {
+    content: " ";
+    display: table; }
+  #page-names:after {
+    clear: both; }
+  #page-names .page-name {
+    position: relative;
+    vertical-align: bottom;
+    height: 1.5rem;
+    text-transform: uppercase; }
+  #page-names .name-selectors {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0; }
+    #page-names .name-selectors:before, #page-names .name-selectors:after {
+      content: " ";
+      display: table; }
+    #page-names .name-selectors:after {
+      clear: both; }
+  #page-names .name-selector {
+    display: block;
+    float: left; }
+  #page-names .name-selector.next {
+    float: right;
+    padding-left: 1.875rem; }
+  #page-names .name-selector.prev {
+    padding-right: 1.875rem; }
+  #page-names .name-selector.prev .icon {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg); }
+  #page-names .name-selector.next .icon {
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg); }
+  #page-names .name-selector-link {
+    display: block;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    padding: 0 4px;
+    font-size: 10px;
+    text-align: center; }
+    #page-names .name-selector-link .icon {
+      height: 50%;
+      margin-top: 0.38rem; }
+    #page-names .name-selector-link.active {
+      color: #F00; }
+    #page-names .name-selector-link:hover {
+      background-color: #FC0;
+      color: #000; }
