@@ -2034,12 +2034,18 @@ video.background {
 
 .page-navigations {
   position: absolute;
-  /* Ugly hack, to style .page-navigations only if .thumbs is next */ }
+  /* Ugly hack, to style .page-navigations base on .thumbs existence */ }
   .page-navigations:before, .page-navigations:after {
     content: " ";
     display: table; }
   .page-navigations:after {
     clear: both; }
+  .page-navigations:not(.has-thumbs) {
+    left: 1.5rem;
+    top: 27rem;
+    /* @todo: magic number. replace immediately */
+    height: 1.625rem;
+    width: 50rem; }
   .page-navigations.has-thumbs {
     right: 12rem;
     bottom: 359px;

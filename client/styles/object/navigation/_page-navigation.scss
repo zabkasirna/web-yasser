@@ -3,8 +3,14 @@ $page-navigation-height: x(1);
 .page-navigations {
     @include clearfix;
     position: absolute;
-    
-    /* Ugly hack, to style .page-navigations only if .thumbs is next */
+
+    /* Ugly hack, to style .page-navigations base on .thumbs existence */
+    &:not(.has-thumbs) {
+        left: x(1);
+        top: x(18); /* @todo: magic number. replace immediately */
+        height: r(1.625rem);
+        width: r(50rem);
+    }
     &.has-thumbs {
         right: x(8);
         bottom: 359px; /* @todo: magic number. replace immediately */
