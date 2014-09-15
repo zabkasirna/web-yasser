@@ -1,5 +1,7 @@
 module.exports = {
     element: $(),
+    naturalH: 0,
+    naturalW: 0,
     init: function(el) {
         var self = this
         ,   imgLoaded   = imagesLoaded( document.querySelector('body') )
@@ -9,6 +11,10 @@ module.exports = {
         self.element = el;
 
         imgLoaded.on('always', function() {
+
+            self.naturalH = self.element.height();
+            self.naturalW = self.element.width();
+
             self.rescaleImage();
             $preloader.addClass('page-loaded');
 
@@ -49,18 +55,36 @@ module.exports = {
         });
     },
     rescaleImage: function() {
-        var imageRatio = this.element.width() / this.element.height()
+        var imageRatio = this.naturalW / this.naturalH
         ,   viewportRatio = $(window).width() / $(window).height()
+        ,   pushLeft
+        ,   pushTop
         ;
 
         if (viewportRatio < imageRatio) {
             this.element.removeClass('full-width').addClass('full-height');
             pushLeft = ( imageRatio * $(window).height() - $(window).width() ) / -2;
-            this.element.css('left', pushLeft);
+            pushTop = 0;
+            this.element.css({
+                'top':  pushTop,
+                'left': pushLeft
+            });
         }
         else {
             this.element.removeClass('full-height').addClass('full-width');
-            this.element.css('left', 0);
+            pushLeft = 0;
+            pushTop = (this.element.height() - $(window).height()) / -2;
+            this.element.css({
+                'top':  pushTop + 'px',
+                'left': pushLeft
+            });
         }
+
+        console.log('pushTop', pushTop);
     }
 };
+
+
+/*
+    w / h  =  2 / 3 * 3 / 2 = w / w
+*/
