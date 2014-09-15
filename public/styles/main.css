@@ -2034,23 +2034,29 @@ video.background {
 
 .page-navigations {
   position: absolute;
-  /* Ugly hack, to style .page-navigations base on .thumbs existence */ }
+  left: 1.5rem;
+  top: 27rem;
+  /* @todo: magic number. replace immediately */
+  height: 1.625rem;
+  width: 50rem; }
   .page-navigations:before, .page-navigations:after {
     content: " ";
     display: table; }
   .page-navigations:after {
     clear: both; }
-  .page-navigations:not(.has-thumbs) {
-    left: 1.5rem;
-    top: 27rem;
-    /* @todo: magic number. replace immediately */
-    height: 1.625rem;
-    width: 50rem; }
   .page-navigations.has-thumbs {
+    left: auto;
+    top: auto;
     right: 12rem;
     bottom: 359px;
     /* @todo: magic number. replace immediately */
     width: 50rem; }
+  .page-navigations.has-infos {
+    right: 12rem;
+    top: auto;
+    bottom: 1.5rem;
+    width: 100%;
+    padding-right: 3rem; }
 
 .page-navigation {
   -ms-box-sizing: content-box;
@@ -2071,6 +2077,16 @@ video.background {
   .page-navigation.background--light {
     border-color: #000; }
 
+.has-infos .page-navigation {
+  width: 35.25rem; }
+  .has-infos .page-navigation.has-info-left {
+    float: left; }
+  .has-infos .page-navigation.has-info-middle {
+    float: none;
+    margin: 0 auto; }
+  .has-infos .page-navigation.has-info-right {
+    float: right; }
+
 .page-navigation a, .page-navigation p, .page-navigation ul, .page-navigation li, .page-navigation i {
   margin: 0;
   padding: 0;
@@ -2084,6 +2100,12 @@ video.background {
   overflow: hidden; }
 .page-navigation .page-selectors {
   float: left;
+  width: 12.375rem;
+  overflow: hidden; }
+.page-navigation .page-infos {
+  position: absolute;
+  bottom: 1.5rem;
+  float: none;
   width: 12.375rem;
   overflow: hidden; }
 

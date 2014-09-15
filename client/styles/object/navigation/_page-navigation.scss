@@ -4,17 +4,24 @@ $page-navigation-height: x(1);
     @include clearfix;
     position: absolute;
 
-    /* Ugly hack, to style .page-navigations base on .thumbs existence */
-    &:not(.has-thumbs) {
-        left: x(1);
-        top: x(18); /* @todo: magic number. replace immediately */
-        height: r(1.625rem);
-        width: r(50rem);
-    }
+    left: x(1);
+    top: x(18); /* @todo: magic number. replace immediately */
+    height: r(1.625rem);
+    width: r(50rem);
+
     &.has-thumbs {
+        left: auto;
+        top: auto;
         right: x(8);
         bottom: 359px; /* @todo: magic number. replace immediately */
         width: r(50rem);
+    }
+    &.has-infos {
+        right: x(8);
+        top: auto;
+        bottom: x(1);
+        width: 100%;
+        padding-right: x(2);
     }
 }
 
@@ -36,6 +43,16 @@ $page-navigation-height: x(1);
     // Dynamic value
     &.background--dark { border-color: $white; }
     &.background--light { border-color: $black; }
+}
+
+.page-navigation {
+    .has-infos & {
+        width: x(23.5);
+
+        &.has-info-left { float: left; }
+        &.has-info-middle { float: none; margin: 0 auto; }
+        &.has-info-right { float: right; }
+    }
 }
 
 $info-btns-togglers-width: x(1);
@@ -60,6 +77,14 @@ $info-btns-width: x(7);
 
     .page-selectors {
         float: left;
+        width: x(8.25);
+        overflow: hidden;
+    }
+
+    .page-infos {
+        position: absolute;
+        bottom: x(1);
+        float: none;
         width: x(8.25);
         overflow: hidden;
     }
