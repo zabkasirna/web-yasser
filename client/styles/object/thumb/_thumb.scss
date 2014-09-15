@@ -4,10 +4,8 @@
     bottom: x(1);
     right: x(1);
     float: right;
-    width: r(49rem);
-    height: r(20rem);
-
-    // border-top: 1px solid $black;
+    width: r(50rem);
+    height: r(21rem);
 }
 
 .thumb-deco {
@@ -25,14 +23,18 @@
 
 .thumb {
     @include clearfix;
-    padding: x(.25) 0;
     float: left;
+    background-color: transparent;
+    padding: (.5rem);
 
     // Default value, will be inherited
     color: $black;
 
-    &:nth-of-type(2n)   { margin: 0 r(.5rem) 0 0; }
-    &:nth-of-type(2n+1) { margin: 0 0 0 r(.5rem); }
+    &:hover {
+        cursor: pointer;
+        background-color: rgba($black, 1);
+        color: $white;
+    }
 }
 
 .thumb-images,
@@ -43,6 +45,8 @@
     float: left;
     position: relative;
     overflow: hidden;
+
+    &.is-swap { float: right; }
 }
 
 .thumb-texts {
@@ -68,6 +72,8 @@
         // Dynamic styles, will be inherited
         &.background--light { color: $black; }
         &.background--dark  { color: $white; }
+
+        .thumb:hover & { color: $white; }
     }
 
     .thumb-title {

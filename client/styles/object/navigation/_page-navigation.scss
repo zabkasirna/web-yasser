@@ -4,8 +4,8 @@ $page-navigation-height: x(1);
     @include clearfix;
     position: absolute;
     right: x(10);
-    bottom: 343px; /* @todo: magic number. replace immediately */
-    width: r(49rem);
+    bottom: 359px; /* @todo: magic number. replace immediately */
+    width: r(50rem);
 }
 
 .page-navigation {
@@ -18,7 +18,7 @@ $page-navigation-height: x(1);
     font-size: r(.75rem);
 
     // @todo
-    width: r(25.5rem);
+    width: x(17.25);
 
     // Default value, will be replaced dynamically
     border: 1px solid $black;
@@ -50,7 +50,7 @@ $info-btns-width: x(9);
 
     .page-selectors {
         float: left;
-        width: x(8);
+        width: x(8.25);
         overflow: hidden;
     }
 }
