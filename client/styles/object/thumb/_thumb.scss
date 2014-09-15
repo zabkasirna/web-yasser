@@ -46,13 +46,16 @@
     position: relative;
     overflow: hidden;
 
-    &.is-swap { float: right; }
+    // Dynamic value
+    .thumb.is-swap & { float: right; }
 }
 
 .thumb-texts {
     // Will be inherited
     font-size: r(.75rem);
     line-height: r(1rem);
+
+    .thumb.is-swap & { padding-left: 6px; }
 }
 
 .thumb-text {

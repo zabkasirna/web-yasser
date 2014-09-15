@@ -4,7 +4,5 @@ module.exports = {
         BackgroundCheck.init({
             targets: '.recolor'
         });
-
-        console.log(BackgroundCheck.get('targets'));
     }
 };

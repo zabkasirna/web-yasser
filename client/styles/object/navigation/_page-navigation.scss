@@ -112,8 +112,8 @@ $info-btns-width: x(9);
         }
 
         // Dynamic border color
-        &.background--dark { .info-btn-toggler:nth-child(2) { border-color: $white; } }
-        &.background--light { .info-btn-toggler:nth-child(2) { border-color: $black; } }
+        &.background--dark { .info-btn-toggler  { border-color: $white; } }
+        &.background--light { .info-btn-toggler { border-color: $black; } }
     }
 }
 
