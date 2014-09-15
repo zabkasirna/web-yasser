@@ -16,15 +16,12 @@ module.exports = {
             self.naturalW = self.element.width();
 
             self.rescaleImage();
-            $preloader.addClass('page-loaded');
+            
+            if (!self.element.data('video')) $preloader.addClass('page-loaded');
 
             setTimeout(function() {
-                $preloader.css('z-index', '-9000');
-
-                if (self.element.data('video')) {
-                    self.loadVideo(self.element.data('video'));
-                }
-
+                if (!self.element.data('video')) $preloader.css('z-index', '-9000');
+                else self.loadVideo(self.element.data('video'));
             }, 1000);
         });
     },
@@ -52,6 +49,11 @@ module.exports = {
 
         BV.getPlayer().on('loadeddata', function() {
             self.element.addClass('video-loaded');
+            $('#preloaders').addClass('page-loaded');
+            
+            setTimeout(function() {
+                $('#preloaders').css('z-index', '-9000');
+            }, 1000);
         });
     },
     rescaleImage: function() {
@@ -79,8 +81,6 @@ module.exports = {
                 'left': pushLeft
             });
         }
-
-        console.log('pushTop', pushTop);
     }
 };
 
