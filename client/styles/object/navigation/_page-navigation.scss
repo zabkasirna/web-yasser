@@ -157,6 +157,7 @@ $info-btns-width: x(7);
         font-size: 10px;
         text-align: center;
 
+        &.active,
         &:hover { background-color: $yellow; color: $black; }
     }
 

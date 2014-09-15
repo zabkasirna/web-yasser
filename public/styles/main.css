@@ -2156,7 +2156,7 @@ video.background {
   padding: 0 4px;
   font-size: 10px;
   text-align: center; }
-  .page-selectors .page-selector-link:hover {
+  .page-selectors .page-selector-link.active, .page-selectors .page-selector-link:hover {
     background-color: #FC0;
     color: #000; }
 .page-selectors.background--light {
@@ -2209,11 +2209,11 @@ video.background {
     background-color: #F2F2F2; }
 
 .thumb-groups {
-  -webkit-transition: left 0.3s linear;
-          transition: left 0.3s linear;
+  -webkit-transition: left 0.4s ease-out;
+          transition: left 0.4s ease-out;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 1px;
   width: 100%;
   height: 100%;
   overflow-y: scroll; }

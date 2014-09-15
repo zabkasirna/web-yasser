@@ -29,11 +29,11 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
 }
 
 .thumb-groups {
-    @include transition(left .3s linear);
+    @include transition(left .4s ease-out);
     @include clearfix;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 1px;
     width: $thumb-groups-width;
     height: $thumb-groups-height;
     overflow-y: scroll;
