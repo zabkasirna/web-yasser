@@ -131,7 +131,7 @@ $info-btns-width: x(7);
         position: relative;
         display: block;
         float: left;
-        width: x(1);
+        min-width: x(1);
         height: x(1);
         text-transform: uppercase;
 
