@@ -2015,7 +2015,7 @@ video.background {
             transition: padding 0.2s linear 0.3s, max-height 0.5s ease-out;
     max-height: 0;
     padding: 0 0.75rem;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #FC0;
     overflow: hidden; }
     #navigation .nav-2 a {
@@ -2414,3 +2414,57 @@ p {
         -webkit-transform: rotate(180deg);
             -ms-transform: rotate(180deg);
                 transform: rotate(180deg); }
+
+#wordings {
+  float: right;
+  width: 50%;
+  height: 100%;
+  min-height: 100%;
+  display: table;
+  color: #F2F2F2; }
+  #wordings:before, #wordings:after {
+    content: " ";
+    display: table; }
+  #wordings:after {
+    clear: both; }
+  #wordings h1, #wordings p, #wordings quote {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    text-transform: inherit;
+    color: inherit; }
+  #wordings .wording {
+    display: table-cell;
+    vertical-align: middle; }
+    #wordings .wording:before, #wordings .wording:after {
+      content: " ";
+      display: table; }
+    #wordings .wording:after {
+      clear: both; }
+  #wordings .wording-head {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 0 0 0.75rem 0;
+    text-transform: uppercase;
+    text-align: right; }
+  #wordings .wording-body {
+    border-top: 1px solid white;
+    padding: 0.75rem 0;
+    font-size: 0.875rem;
+    text-align: right; }
+  #wordings .wording-body.background--light, #wordings .wording-head.background--light, #wordings .wording-footer.background--light {
+    color: #000; }
+  #wordings .wording-body.background--dark, #wordings .wording-head.background--dark, #wordings .wording-footer.background--dark {
+    color: #F2F2F2; }
+  #wordings .wording-body.background--light {
+    border-color: #000; }
+  #wordings .wording-body.background--dark {
+    border-color: #F2F2F2; }
+  #wordings .wording-footer {
+    font-size: 0.8rem;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-top: 18px solid #F2F2F2;
+    padding: 0.75rem 0;
+    text-align: right; }
