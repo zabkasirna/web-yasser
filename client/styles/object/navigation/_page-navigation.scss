@@ -3,9 +3,13 @@ $page-navigation-height: x(1);
 .page-navigations {
     @include clearfix;
     position: absolute;
-    right: x(10);
-    bottom: 359px; /* @todo: magic number. replace immediately */
-    width: r(50rem);
+    
+    /* Ugly hack, to style .page-navigations only if .thumbs is next */
+    &.has-thumbs {
+        right: x(10);
+        bottom: 359px; /* @todo: magic number. replace immediately */
+        width: r(50rem);
+    }
 }
 
 .page-navigation {
@@ -17,7 +21,7 @@ $page-navigation-height: x(1);
 
     font-size: r(.75rem);
 
-    // @todo
+    // @todo: make responsize
     width: x(17.25);
 
     // Default value, will be replaced dynamically
