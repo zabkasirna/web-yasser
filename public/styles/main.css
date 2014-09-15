@@ -2189,7 +2189,8 @@ video.background {
   right: 1.5rem;
   float: right;
   width: 50rem;
-  height: 21rem; }
+  height: 21rem;
+  overflow: hidden; }
   .thumbs:before, .thumbs:after {
     content: " ";
     display: table; }
@@ -2206,6 +2207,32 @@ video.background {
     background-color: #000; }
   .thumb-deco.background--dark {
     background-color: #F2F2F2; }
+
+.thumb-groups {
+  -webkit-transition: left 0.3s linear;
+          transition: left 0.3s linear;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll; }
+  .thumb-groups:before, .thumb-groups:after {
+    content: " ";
+    display: table; }
+  .thumb-groups:after {
+    clear: both; }
+
+.thumb-group {
+  float: left;
+  width: 50rem;
+  height: 21rem;
+  position: relative; }
+  .thumb-group:before, .thumb-group:after {
+    content: " ";
+    display: table; }
+  .thumb-group:after {
+    clear: both; }
 
 .thumb {
   float: left;
@@ -2272,6 +2299,9 @@ video.background {
   top: 0;
   left: 50%;
   margin: 0 0 0 -106px; }
+
+p {
+  font-size: 96px; }
 
 #home-heros {
   display: table;
