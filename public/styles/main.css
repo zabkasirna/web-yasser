@@ -2041,7 +2041,7 @@ video.background {
   .page-navigations:after {
     clear: both; }
   .page-navigations.has-thumbs {
-    right: 15rem;
+    right: 12rem;
     bottom: 359px;
     /* @todo: magic number. replace immediately */
     width: 50rem; }
@@ -2053,7 +2053,7 @@ video.background {
   position: relative;
   height: 1.5rem;
   font-size: 0.75rem;
-  width: 25.875rem;
+  width: 22.875rem;
   border: 1px solid #000; }
   .page-navigation:before, .page-navigation:after {
     content: " ";
@@ -2073,7 +2073,7 @@ video.background {
   letter-spacing: inherit; }
 .page-navigation .info-btns {
   float: left;
-  width: 13.5rem;
+  width: 10.5rem;
   height: 1.5rem;
   overflow: hidden; }
 .page-navigation .page-selectors {
@@ -2093,7 +2093,7 @@ video.background {
 .info-btns .info-btn-togglers {
   display: block;
   float: left;
-  width: 12rem;
+  width: 9rem;
   height: 1.5rem;
   font-size: 0.75rem;
   line-height: 1.5rem;

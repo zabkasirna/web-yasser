@@ -6,7 +6,7 @@ $page-navigation-height: x(1);
     
     /* Ugly hack, to style .page-navigations only if .thumbs is next */
     &.has-thumbs {
-        right: x(10);
+        right: x(8);
         bottom: 359px; /* @todo: magic number. replace immediately */
         width: r(50rem);
     }
@@ -22,7 +22,7 @@ $page-navigation-height: x(1);
     font-size: r(.75rem);
 
     // @todo: make responsize
-    width: x(17.25);
+    width: x(15.25);
 
     // Default value, will be replaced dynamically
     border: 1px solid $black;
@@ -33,8 +33,8 @@ $page-navigation-height: x(1);
 }
 
 $info-btns-togglers-width: x(1);
-$info-btns-texts-width: x(8);
-$info-btns-width: x(9);
+$info-btns-texts-width: x(6);
+$info-btns-width: x(7);
 
 .page-navigation {
     // Element reset
