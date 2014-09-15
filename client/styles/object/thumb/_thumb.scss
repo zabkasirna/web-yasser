@@ -1,11 +1,17 @@
+$thumbs-width: r(50rem);
+$thumbs-height: r(21rem);
+$thumb-groups-width: 100%; // default value, will be replaced dynamically
+$thumb-groups-height: 100%; // default value, will be replaced dynamically
+
 .thumbs {
     @include clearfix;
     position: absolute;
     bottom: x(1);
     right: x(1);
     float: right;
-    width: r(50rem);
-    height: r(21rem);
+    width: $thumbs-width;
+    height: $thumbs-height;
+    overflow: hidden;
 }
 
 .thumb-deco {
@@ -17,8 +23,28 @@
     // default value, will be replaced dynamically
     background-color: $white;
 
+    // Dynamic value
     &.background--light { background-color: $black; }
     &.background--dark  { background-color: $white; }
+}
+
+.thumb-groups {
+    @include transition(left .3s linear);
+    @include clearfix;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $thumb-groups-width;
+    height: $thumb-groups-height;
+    overflow-y: scroll;
+}
+
+.thumb-group {
+    @include clearfix;
+    float: left;
+    width: $thumbs-width;
+    height: $thumbs-height;
+    position: relative;
 }
 
 .thumb {
@@ -100,4 +126,8 @@
     top: 0;
     left: 50%;
     margin: 0 0 0 -106px;
+}
+
+p {
+    font-size: 96px;
 }
