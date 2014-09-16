@@ -2563,7 +2563,8 @@ p {
 
 #contacts {
   float: left;
-  width: 17%;
+  width: 12.5rem;
+  min-width: 12.5rem;
   min-height: 100%;
   display: table; }
   #contacts:before, #contacts:after {
@@ -2609,8 +2610,8 @@ p {
 
 #texts {
   float: right;
-  width: 16%;
-  min-height: 100%;
+  width: 12.5rem;
+  min-width: 12.5rem;
   display: table; }
   #texts:before, #texts:after {
     content: " ";
@@ -2692,3 +2693,10 @@ p {
     #page-names .name-selector-link:hover {
       background-color: #FC0;
       color: #000; }
+
+.page-navigations.has-neu {
+  width: 15.75rem; }
+  .page-navigations.has-neu .page-navigation {
+    width: inherit; }
+  .page-navigations.has-neu .info-btn-togglers {
+    width: 5rem; }
