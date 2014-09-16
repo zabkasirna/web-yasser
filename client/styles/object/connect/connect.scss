@@ -154,3 +154,8 @@
         &:hover { background-color: $yellow; color: $black; }
     }
 }   
+
+.ordinal {
+    vertical-align: super; 
+    font-size: 0.5em;
+}

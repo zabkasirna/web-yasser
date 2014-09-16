@@ -2693,6 +2693,10 @@ p {
       background-color: #FC0;
       color: #000; }
 
+.ordinal {
+  vertical-align: super;
+  font-size: 0.5em; }
+
 .page-navigations.has-neu {
   width: 15.75rem; }
   .page-navigations.has-neu .page-navigation {
