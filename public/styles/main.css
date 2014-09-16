@@ -2609,14 +2609,13 @@ p {
     line-height: inherit; }
   #contacts .contact {
     display: table-cell;
-    vertical-align: bottom;
-    padding: 0.45rem; }
+    vertical-align: bottom; }
   #contacts .contact > *:not(:first-child), #contacts .contact > *:not(:last-child) {
-    border-left: 1px solid white;
-    border-right: 1px solid white;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
     padding: 0 0.375rem; }
   #contacts .contact > *:first-child, #contacts .contact > *:last-child {
-    border: 1px solid white; }
+    border: 1px solid #000; }
   #contacts .contact > *:first-child {
     border-bottom: none;
     padding: 0.75rem 0.375rem 1rem; }
@@ -2725,6 +2724,10 @@ p {
     #page-names .name-selector-link:hover {
       background-color: #FC0;
       color: #000; }
+
+.ordinal {
+  vertical-align: super;
+  font-size: 0.5em; }
 
 .page-navigations.has-neu {
   width: 15.75rem; }

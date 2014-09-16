@@ -14,18 +14,17 @@
     .contact {
         display: table-cell;
         vertical-align: bottom;
-        padding: 0.45rem;
     }
     
     .contact {
         & > *:not(:first-child), & > *:not(:last-child) {
-            border-left: 1px solid white;
-            border-right: 1px solid white;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
             padding: 0 x(0.25);
         }
 
         & > *:first-child, & > *:last-child {
-            border: 1px solid white;
+            border: 1px solid $black;
         }
         & > *:first-child {
             border-bottom: none;
@@ -155,3 +154,8 @@
         &:hover { background-color: $yellow; color: $black; }
     }
 }   
+
+.ordinal {
+    vertical-align: super; 
+    font-size: 0.5em;
+}
