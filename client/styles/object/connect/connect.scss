@@ -1,0 +1,156 @@
+#contacts {
+    @include clearfix;
+    float: left;
+    width: 17%;
+    min-height: 100%;
+    display: table;
+
+    p,a {
+        font-size: inherit;
+        line-height: inherit;
+    }
+    
+    .contact {
+        display: table-cell;
+        vertical-align: bottom;
+        padding: 0.45rem;
+    }
+    
+    .contact {
+        & > *:not(:first-child), & > *:not(:last-child) {
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            padding: 0 x(0.25);
+        }
+
+        & > *:first-child, & > *:last-child {
+            border: 1px solid white;
+        }
+        & > *:first-child {
+            border-bottom: none;
+            padding: x(0.5) x(0.25) r(1rem);
+        }
+        & > *:last-child {
+            border-top: none;
+            padding: 0 x(0.25);
+        }
+    }
+
+    .contact-email {
+        font-size: 0.70rem;
+        line-height: 1.2rem;
+        text-decoration: underline;
+
+
+        a {
+            background-image: none;
+        }
+    }
+
+    p {
+        font-size: 0.70rem;
+        line-height: 1.2rem;
+        margin: 0;
+    }
+
+    .contact-credit {
+        background-color: $yellow;
+        margin: 0;
+    }
+
+    .yasser-rizky {
+        letter-spacing: 0.33em;
+        font-weight: bold;
+    }
+}
+
+#texts {
+    @include clearfix;
+    float: right;
+    width: 16%;
+    min-height: 100%;
+    display: table;
+
+     p {
+        font-size: 0.71rem;
+        line-height: 1.2rem;
+        padding: 1rem 0;
+        margin: 0;
+        color: inherit;
+    }
+
+    .text {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    strong {
+        color: inherit;
+    }
+
+    .text-body {
+        text-transform: uppercase;
+        color: $white;
+    }
+}
+
+#page-names {
+    @include clearfix;  
+    border: 1px solid black;
+    position: absolute;
+    left: 50%;
+    bottom: x(1.33);
+    margin: 0 0 0 -106px;
+    width: 212px;
+    height: x(1);
+
+    .page-name{
+        position: relative;
+        vertical-align: bottom;
+        height: x(1);
+        text-transform: uppercase;
+    }
+
+    .name-selectors {
+        @include clearfix;
+        width: 100%;
+        height: 100%;  
+        margin: 0;
+        padding: 0;
+    }
+    
+    .name-selector {
+        display: block;
+        float: left;
+    }
+    
+    .name-selector.next {
+        float: right; 
+        padding-left: x(1.25);
+    }
+    
+    .name-selector.prev {
+        padding-right: x(1.25);
+    }
+    
+    .name-selector.prev .icon { transform: rotate(90deg); }
+    .name-selector.next .icon { transform: rotate(-90deg); }
+    
+    .name-selector-link {
+        display: block;
+        height: r(1.375rem);
+        line-height: x(1);
+        padding: 0 4px;
+        font-size: 10px;
+        text-align: center;
+
+        .icon {
+            height: 50%;
+            margin-top: 0.38rem;
+            pointer-events: none;
+        }
+        
+        &.active {color: $red;}
+        &:hover { background-color: $yellow; color: $black; }
+    }
+}   

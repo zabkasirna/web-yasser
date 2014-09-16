@@ -2675,3 +2675,10 @@ p {
     #page-names .name-selector-link:hover {
       background-color: #FC0;
       color: #000; }
+
+.page-navigations.has-neu {
+  width: 15.75rem; }
+  .page-navigations.has-neu .page-navigation {
+    width: inherit; }
+  .page-navigations.has-neu .info-btn-togglers {
+    width: 5rem; }
