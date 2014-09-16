@@ -1,5 +1,5 @@
 #preloaders {
-    @include transition(background-color 1s ease-out);
+    @include transition(background-color 1s ease-out, z-index .1s step-end 1s);
     position: fixed;
     top: 0;
     left: 0;
@@ -10,9 +10,10 @@
     z-index: 9000;
 
     background-color: #FFF;
+    pointer-events: none;
 
     &.page-loaded {
         background-color: rgba(#FFF, 0);
-        pointer-events: none;
+        z-index: -9000;
     }
 }

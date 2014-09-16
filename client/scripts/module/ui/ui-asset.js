@@ -6,6 +6,7 @@ module.exports = {
         var self = this
         ,   imgLoaded   = imagesLoaded( document.querySelector('body') )
         ,   $preloader  = $('#preloaders')
+        ,   hasVideo    = el.data('video') ? true : false
         ;
 
         self.element = el;
@@ -16,12 +17,10 @@ module.exports = {
             self.naturalW = self.element.width();
 
             self.rescaleImage();
-            
-            if (!self.element.data('video')) $preloader.addClass('page-loaded');
 
             setTimeout(function() {
-                if (!self.element.data('video')) $preloader.css('z-index', '-9000');
-                else self.loadVideo(self.element.data('video'));
+                if (!hasVideo) $preloader.addClass('page-loaded');
+                else if (hasVideo) self.loadVideo(self.element.data('video'));
             }, 1000);
         });
     },
@@ -50,13 +49,14 @@ module.exports = {
         BV.getPlayer().on('loadeddata', function() {
             self.element.addClass('video-loaded');
             $('#preloaders').addClass('page-loaded');
-            
-            setTimeout(function() {
-                $('#preloaders').css('z-index', '-9000');
-            }, 1000);
+            setTimeout(function() { $('#preloaders').css('z-index', '-9000'); }, 1000);
         });
     },
     rescaleImage: function() {
+        var self = this;
+
+        if (!self.element.length) console.log('no background image');
+
         var imageRatio = this.naturalW / this.naturalH
         ,   viewportRatio = $(window).width() / $(window).height()
         ,   pushLeft
@@ -83,8 +83,3 @@ module.exports = {
         }
     }
 };
-
-
-/*
-    w / h  =  2 / 3 * 3 / 2 = w / w
-*/

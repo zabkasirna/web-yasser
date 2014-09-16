@@ -8,7 +8,7 @@
 ;( function( $ ) {
     var debounce = require('./module/helper/debounce');
 
-    var uiBackground = require('./module/ui/ui-background')
+    var uiAsset      = require('./module/ui/ui-asset')
     ,   uiColor      = require('./module/ui/ui-color')
     ,   uiNavigation = require('./module/ui/ui-navigation')
     ,   uiHome       = require('./module/ui/ui-home')
@@ -21,23 +21,20 @@
     }, 100);
 
     // Background
-    if ($('.background').length) uiBackground.init($('.background'));
+    if ($('.background').length) uiAsset.init($('.background'));
+    $(window).on('resize', function() { uiAsset.rescaleImage(); });
 
-    // Navigations
+    // Main navigation
     var $navs = $('#navigation');
     if ($navs.length) uiNavigation.init($navs);
 
-    if ($('.page-navigations').length) {
+    // Page navigation
+    if ($('.page-navigations').length)
         uiNavigation.initPageNavigation($('page-navigations.has-infos').length);
-    }
 
     // Home
     uiHome.init($('#home-heros'));
 
     // Thumbnails
     if ($('.thumbs').length) uiThumb.init($('.thumbs'));
-
-    $(window).on('resize', function() {
-        if ($('.background').length) uiBackground.rescaleImage();
-    });
 })(jQuery);
