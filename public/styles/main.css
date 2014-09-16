@@ -2577,8 +2577,7 @@ p {
     line-height: inherit; }
   #contacts .contact {
     display: table-cell;
-    vertical-align: bottom;
-    padding: 0.45rem; }
+    vertical-align: bottom; }
   #contacts .contact > *:not(:first-child), #contacts .contact > *:not(:last-child) {
     border-left: 1px solid white;
     border-right: 1px solid white;
