@@ -1930,7 +1930,7 @@ pre, code {
   right: 0;
   padding: 1.5rem;
   z-index: 4000;
-  overflow: scroll; }
+  overflow: hidden; }
   #page:before, #page:after {
     content: " ";
     display: table; }
@@ -2015,7 +2015,7 @@ video.background {
             transition: padding 0.2s linear 0.3s, max-height 0.5s ease-out;
     max-height: 0;
     padding: 0 0.75rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.75);
     color: #FC0;
     overflow: hidden; }
     #navigation .nav-2 a {
@@ -2102,12 +2102,34 @@ video.background {
   float: left;
   width: 12.375rem;
   overflow: hidden; }
+.page-navigation .page-tools {
+  float: left;
+  width: 12.375rem;
+  overflow: hidden;
+  /* @todo: move to right place */ }
+  .page-navigation .page-tools .page-tool-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    letter-spacing: 0.01em;
+    font-size: 10px;
+    line-height: 1.5rem; }
 .page-navigation .page-infos {
+  -webkit-transition: height 0.6s ease-out;
+          transition: height 0.6s ease-out;
+  background-color: rgba(0, 0, 0, 0.75);
   position: absolute;
   bottom: 1.5rem;
   float: none;
-  width: 12.375rem;
-  overflow: hidden; }
+  width: 35.375rem;
+  height: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin: 0 0 0 -1px; }
+  .page-navigation .page-infos.is-active {
+    height: 18rem; }
 
 .info-btns .info-btn-icons {
   display: block;
@@ -2143,9 +2165,9 @@ video.background {
     border-top: 1px solid #000; }
   .info-btns .info-btn-togglers .info-btn-toggler:nth-child(n+3) {
     display: none; }
-  .info-btns .info-btn-togglers.is-active .info-btn-toggler:nth-child(1), .info-btns .info-btn-togglers:hover .info-btn-toggler:nth-child(1) {
+  .info-btns .info-btn-togglers.is-active .info-btn-toggler:nth-child(1) {
     margin-top: -1.5rem; }
-  .info-btns .info-btn-togglers.is-active .info-btn-toggler:nth-child(2), .info-btns .info-btn-togglers:hover .info-btn-toggler:nth-child(2) {
+  .info-btns .info-btn-togglers.is-active .info-btn-toggler:nth-child(2) {
     margin-top: -1px; }
   .info-btns .info-btn-togglers.background--dark .info-btn-toggler {
     border-color: #F2F2F2; }
@@ -2191,6 +2213,30 @@ video.background {
   color: #000; }
 .page-selectors.background--dark {
   color: #F2F2F2; }
+
+.page-infos .page-info-header {
+  padding: 0.75rem 0.75rem; }
+  .page-infos .page-info-header .info-title, .page-infos .page-info-header .info-subtitle {
+    color: #F2F2F2;
+    text-transform: uppercase; }
+  .page-infos .page-info-header .info-title {
+    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 3rem;
+    margin: 0; }
+  .page-infos .page-info-header .info-subtitle {
+    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0; }
+.page-infos .page-info-bodys {
+  padding: 0.75rem 0.75rem;
+  color: #F2F2F2; }
+  .page-infos .page-info-bodys p, .page-infos .page-info-bodys a, .page-infos .page-info-bodys li {
+    color: inherit;
+    margin: 0; }
+.page-infos .page-info-footer {
+  padding: 0.75rem; }
+  .page-infos .page-info-footer p {
+    margin: 0;
+    color: #F2F2F2; }
 
 #brands {
   display: block;
@@ -2614,14 +2660,15 @@ p {
             transform: rotate(-90deg); }
   #page-names .name-selector-link {
     display: block;
-    height: 1.5rem;
+    height: 1.375rem;
     line-height: 1.5rem;
     padding: 0 4px;
     font-size: 10px;
     text-align: center; }
     #page-names .name-selector-link .icon {
       height: 50%;
-      margin-top: 0.38rem; }
+      margin-top: 0.38rem;
+      pointer-events: none; }
     #page-names .name-selector-link.active {
       color: #F00; }
     #page-names .name-selector-link:hover {

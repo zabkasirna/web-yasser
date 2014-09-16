@@ -81,12 +81,37 @@ $info-btns-width: x(7);
         overflow: hidden;
     }
 
+    .page-tools {
+        float: left;
+        width: x(8.25);
+        overflow: hidden;
+
+        /* @todo: move to right place */
+        .page-tool-btn {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: $ff-sans-bold;
+            letter-spacing: 0.01em;
+            font-size: 10px;
+            line-height: x(1);
+        }
+    }
+
     .page-infos {
+        @include transition(height .6s ease-out);
+        background-color: rgba($black, .75);
         position: absolute;
         bottom: x(1);
         float: none;
-        width: x(8.25);
-        overflow: hidden;
+        width: r(35.375rem);
+        height: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        margin: 0 0 0 -1px;
+
+        &.is-active { height: x(12); }
     }
 }
 
@@ -136,14 +161,9 @@ $info-btns-width: x(7);
         }
         .info-btn-toggler:nth-child(n+3) { display:none; }
 
-        &.is-active,
-        &:hover {
-            .info-btn-toggler:nth-child(1) {
-                margin-top: x(-1);
-            }
-            .info-btn-toggler:nth-child(2) {
-                margin-top: -1px;
-            }
+        &.is-active {
+            .info-btn-toggler:nth-child(1) { margin-top: x(-1); }
+            .info-btn-toggler:nth-child(2) { margin-top: -1px; }
         }
 
         // Dynamic border color
@@ -194,4 +214,46 @@ $info-btns-width: x(7);
 
     &.background--light { color: $black; }
     &.background--dark  { color: $white; }
+}
+
+.page-infos {
+
+    .page-info-header {
+        padding: x(.5) x(.5);
+
+        .info-title, .info-subtitle {
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        .info-title {
+            font-family: $ff-sans-bold;
+            line-height: x(2);
+            margin: 0;
+        }
+
+        .info-subtitle {
+            font-family: $ff-sans-bold;
+            margin: 0;
+        }
+    }
+
+    .page-info-bodys {
+        padding: x(.5) x(.5);
+        color: $white;
+
+        p, a, li {
+            color: inherit;
+            margin: 0;
+        }
+    }
+
+    .page-info-footer {
+        padding: x(.5);
+
+        p {
+            margin: 0;
+            color: $white;
+        }
+    }
 }

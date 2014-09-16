@@ -37,7 +37,7 @@
         @include transition(padding .2s linear .3s, max-height .5s ease-out);
         max-height: 0;
         padding: 0 x(.5);
-        background-color: rgba($black, .5);
+        background-color: rgba($black, .75);
         color: $yellow;
         overflow: hidden;
         a { font-size: 11px; }

@@ -15,5 +15,16 @@ module.exports = {
         });
 
         el.closest('li').toggleClass('open');
+    },
+    initPageNavigation:  function(hasInfo) {
+        var $infoBtnTogglers = $('.info-btn-togglers')
+        ,   $pageInfos = $('.page-infos')
+        ;
+
+        $infoBtnTogglers.on('click', function() {
+            $(this).toggleClass('is-active');
+            $pageInfos.toggleClass('is-active');
+            console.log($pageInfos);
+        });
     }
 };

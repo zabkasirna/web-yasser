@@ -27,6 +27,10 @@
     var $navs = $('#navigation');
     if ($navs.length) uiNavigation.init($navs);
 
+    if ($('.page-navigations').length) {
+        uiNavigation.initPageNavigation($('page-navigations.has-infos').length);
+    }
+
     // Home
     uiHome.init($('#home-heros'));
 
