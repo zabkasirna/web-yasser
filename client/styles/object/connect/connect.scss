@@ -18,13 +18,13 @@
     
     .contact {
         & > *:not(:first-child), & > *:not(:last-child) {
-            border-left: 1px solid white;
-            border-right: 1px solid white;
+            border-left: 1px solid $black;
+            border-right: 1px solid $black;
             padding: 0 x(0.25);
         }
 
         & > *:first-child, & > *:last-child {
-            border: 1px solid white;
+            border: 1px solid $black;
         }
         & > *:first-child {
             border-bottom: none;
