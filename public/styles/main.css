@@ -2546,7 +2546,8 @@ p {
 
 #contacts {
   float: left;
-  width: 17%;
+  width: 12.5rem;
+  min-width: 12.5rem;
   min-height: 100%;
   display: table; }
   #contacts:before, #contacts:after {
@@ -2592,8 +2593,8 @@ p {
 
 #texts {
   float: right;
-  width: 16%;
-  min-height: 100%;
+  width: 12.5rem;
+  min-width: 12.5rem;
   display: table; }
   #texts:before, #texts:after {
     content: " ";

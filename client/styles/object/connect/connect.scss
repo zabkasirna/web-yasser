@@ -1,7 +1,8 @@
 #contacts {
     @include clearfix;
     float: left;
-    width: 17%;
+    width: 12.5rem;
+    min-width: 12.5rem;
     min-height: 100%;
     display: table;
 
@@ -67,10 +68,10 @@
 #texts {
     @include clearfix;
     float: right;
-    width: 16%;
-    min-height: 100%;
+    width: 12.5rem;
+    min-width: 12.5rem;
     display: table;
-
+    
      p {
         font-size: 0.71rem;
         line-height: 1.2rem;
