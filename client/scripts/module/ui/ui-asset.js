@@ -1,12 +1,15 @@
 module.exports = {
     element: $(),
+    preloader: $('#preloaders'),
     naturalH: 0,
     naturalW: 0,
     init: function(el) {
         var self = this
         ,   imgLoaded   = imagesLoaded( document.querySelector('body') )
-        ,   $preloader  = $('#preloaders')
         ,   hasVideo    = el.data('video') ? true : false
+
+        ,   $parallaxes = $('#parallaxes')
+        ,   hasParallax = $parallaxes.length ? true : false
         ;
 
         self.element = el;
@@ -19,8 +22,9 @@ module.exports = {
             self.rescaleImage();
 
             setTimeout(function() {
-                if (!hasVideo) $preloader.addClass('page-loaded');
-                else if (hasVideo) self.loadVideo(self.element.data('video'));
+                if (!hasVideo && !hasParallax) self.preloader.addClass('page-loaded');
+                else if (hasVideo && !hasParallax) self.loadVideo(self.element.data('video'));
+                else if (hasParallax) self.initParallax();
             }, 1000);
         });
     },
@@ -55,7 +59,7 @@ module.exports = {
     rescaleImage: function() {
         var self = this;
 
-        if (!self.element.length) console.log('no background image');
+        if (!self.element.length) console.warning('no background image');
 
         var imageRatio = this.naturalW / this.naturalH
         ,   viewportRatio = $(window).width() / $(window).height()
@@ -81,5 +85,9 @@ module.exports = {
                 'left': pushLeft
             });
         }
+    },
+    initParallax: function() {
+        var self = this;
+        self.preloader.addClass('page-loaded');
     }
 };
