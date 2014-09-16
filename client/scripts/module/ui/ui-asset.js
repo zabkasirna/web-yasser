@@ -3,18 +3,19 @@ module.exports = {
     preloader: $('#preloaders'),
     naturalH: 0,
     naturalW: 0,
+    imgLoaded: {},
     init: function(el) {
         var self = this
-        ,   imgLoaded   = imagesLoaded( document.querySelector('body') )
         ,   hasVideo    = el.data('video') ? true : false
 
         ,   $parallaxes = $('#parallaxes')
         ,   hasParallax = $parallaxes.length ? true : false
         ;
 
+        self.imgLoaded = imagesLoaded( document.querySelector('body') );
         self.element = el;
 
-        imgLoaded.on('always', function() {
+        self.imgLoaded.on('always', function() {
 
             self.naturalH = self.element.height();
             self.naturalW = self.element.width();
@@ -87,7 +88,24 @@ module.exports = {
         }
     },
     initParallax: function() {
-        var self = this;
+        var self = this
+        ,   $parallax = $('#parallaxes')
+        ,   $imgs = $('.parallax-image')
+        ,   _ph = $parallax.height()
+        ;
+
+        // Center image vertically by margin
+        $imgs.each(function(index) {
+            $(this).css({ 'margin-top': (_ph - $(this).height())/2 });
+        });
+
+        $.parallaxify({
+            positionProperty: 'transform',
+            responsive: true
+        });
+
         self.preloader.addClass('page-loaded');
+
+        console.log($imgs.eq(0).height(), $parallax.height());
     }
 };
