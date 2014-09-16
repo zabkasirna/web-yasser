@@ -113,6 +113,45 @@ $info-btns-width: x(7);
 
         &.is-active { height: x(12); }
     }
+
+    #page-subnavigations {
+        @include transition(max-height .5s ease-out);
+        position: absolute;
+        top: r(1.56rem);
+        left: -1px;
+        color: $white;
+        width: r(10.555rem);
+        max-height: 0;
+        overflow: hidden;
+
+        &.is-active {
+            max-height: x(20);
+        }
+
+        li, a { color: inherit; }
+
+        .page-subnavigation-list {
+            position: relative;
+            border-bottom: 1px solid $white;
+            &:last-child { border-bottom: 0 solid transparent; }
+        }
+
+        .page-subnavigation-link {
+            display: block;
+            margin: 0;
+            font-size: r(0.625rem);
+            line-height: r(1rem);
+            color: $white;
+            width: 100%;
+            padding: x(.25) x(.25);
+            background-color: rgba($black, .75);
+            text-transform: uppercase;
+            &:hover {
+                background-color: $yellow;
+                color: $black;
+            }
+        }
+    }
 }
 
 .info-btns {
