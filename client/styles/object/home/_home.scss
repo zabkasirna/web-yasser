@@ -9,7 +9,7 @@
 
     .home-hero {
         display: table-cell;
-        vertical-align: middle;
+        vertical-align: bottom;
         margin: 0;
         width: 100%;
     }
@@ -19,7 +19,9 @@
     display: block;
     width: 100%;
     padding: x(.5) 0;
-    background-color: $black;
+    background-color: rgba($black, 0.5);
+    border: 1px solid $black;
+    border-bottom: none;
 
     h1 {
         color: $white;
@@ -28,7 +30,8 @@
         font-size: r(1.5rem);
         line-height: x(1.5);
         text-transform: uppercase;
-        padding: 0 x(.5);
+        padding: 0 x(1);
+        letter-spacing: 0.05em;
     }
 }
 
@@ -40,14 +43,26 @@
     position: relative;
     padding: 0;
     height: r(1.5rem);
+    border-left: 1px solid $black;
+    border-right: 1px solid $black;
 
     p:not(.deco) {
         color: $black;
         font-size: 11px;
         line-height: r(1rem);
+        position: relative;
         margin: 0;
-        padding: x(1);
-        border-top: 1px solid $black;
+        padding: x(.5) x(1) 0 x(1);
+
+        &:before{
+            content: "";
+            display: block;
+            position: relative;
+            top: -10px;
+            height: 1px;
+            width: 100%;
+            background-color: $black;
+        }
     }
 
     .home-hero-togglers {
@@ -71,7 +86,8 @@
 
         .deco {
             top: 0;
-            left: 0;
+            left: x(1);
+            text-align: left;
         }
 
         .home-hero-toggler {
@@ -89,7 +105,7 @@
             object {
                 @include transition(transform .3s ease-out);
                 pointer-events: none;
-                transform: rotate(0deg);
+                transform: rotate(180deg);
             }
         }
 
@@ -101,12 +117,12 @@
     }
 
     &.open {
-        height: r(15.5rem);
+        height: r(15rem);
 
         .home-hero-toggler {
             /* @todo: manual value. caution */
-            top: 225px;
-            object { transform: rotate(180deg); }
+            top: 216px;
+            object { transform: rotate(0deg); }
         }
     }
 }
