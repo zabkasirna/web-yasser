@@ -7,12 +7,32 @@
     display: table;
     color: $white;
     
-    h1,p,quote {
+    
+    h1 {
             font-size: inherit;
             line-height: inherit;
             margin: 0;
             text-transform: inherit;
             color:inherit;
+            letter-spacing: 0.05em;
+    }
+
+    p {
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+            text-transform: inherit;
+            color:inherit;
+            letter-spacing: 0.1em;
+    }
+
+    quote {
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+            text-transform: inherit;
+            color:inherit;
+            letter-spacing: 0.4em;
         }
 
     .wording {
@@ -22,20 +42,17 @@
     }
     
     .wording-head {
-        font-size: 3rem;
-        line-height: x(2);
-        padding: 0 0 x(0.5) 0;
-        text-transform: uppercase;
-        text-align: right;
-
-        
+        font-size: r(1.80rem);
+        line-height: r(2rem);
+        padding: 0 0 x(0.75) 0;
+        text-transform: uppercase;       
     }
     
     .wording-body {
         border-top: 1px solid white;
-        padding: x(0.5) 0;
-        font-size: r(0.875rem);
-        text-align: right;
+        padding: x(0.75) 0;
+        font-size: r(0.750rem);
+        line-height: 1rem;
     }
 
     .wording-body, .wording-head, .wording-footer {
@@ -58,12 +75,10 @@
 
     .wording-footer {
         font-size: r(0.8rem);
-        letter-spacing: 0.3em;
         text-transform: uppercase;
         font-family: $ff-sans-bold;
         border-top: 18px solid $white;
-        padding: x(0.5) 0;
-        text-align: right;
+        padding: x(0.75) 0;
     }
     
 }   

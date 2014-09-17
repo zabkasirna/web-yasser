@@ -2534,12 +2534,27 @@ p {
     display: table; }
   #wordings:after {
     clear: both; }
-  #wordings h1, #wordings p, #wordings quote {
+  #wordings h1 {
     font-size: inherit;
     line-height: inherit;
     margin: 0;
     text-transform: inherit;
-    color: inherit; }
+    color: inherit;
+    letter-spacing: 0.05em; }
+  #wordings p {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    text-transform: inherit;
+    color: inherit;
+    letter-spacing: 0.1em; }
+  #wordings quote {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    text-transform: inherit;
+    color: inherit;
+    letter-spacing: 0.4em; }
   #wordings .wording {
     display: table-cell;
     vertical-align: middle; }
@@ -2549,16 +2564,15 @@ p {
     #wordings .wording:after {
       clear: both; }
   #wordings .wording-head {
-    font-size: 3rem;
-    line-height: 3rem;
-    padding: 0 0 0.75rem 0;
-    text-transform: uppercase;
-    text-align: right; }
+    font-size: 1.8rem;
+    line-height: 2rem;
+    padding: 0 0 1.125rem 0;
+    text-transform: uppercase; }
   #wordings .wording-body {
     border-top: 1px solid white;
-    padding: 0.75rem 0;
-    font-size: 0.875rem;
-    text-align: right; }
+    padding: 1.125rem 0;
+    font-size: 0.75rem;
+    line-height: 1rem; }
   #wordings .wording-body.background--light, #wordings .wording-head.background--light, #wordings .wording-footer.background--light {
     color: #000; }
   #wordings .wording-body.background--dark, #wordings .wording-head.background--dark, #wordings .wording-footer.background--dark {
@@ -2569,12 +2583,10 @@ p {
     border-color: #F2F2F2; }
   #wordings .wording-footer {
     font-size: 0.8rem;
-    letter-spacing: 0.3em;
     text-transform: uppercase;
     font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-top: 18px solid #F2F2F2;
-    padding: 0.75rem 0;
-    text-align: right; }
+    padding: 1.125rem 0; }
 
 @media screen and (min-width: 800px) {
   #parallaxes {
