@@ -263,12 +263,14 @@ $info-btns-width: x(7);
         .info-title, .info-subtitle {
             color: $white;
             text-transform: uppercase;
+            letter-spacing: 0.15em;
         }
 
         .info-title {
             font-family: $ff-sans-bold;
             line-height: x(2);
             margin: 0;
+            letter-spacing: 0.15em;
         }
 
         .info-subtitle {
@@ -280,10 +282,13 @@ $info-btns-width: x(7);
     .page-info-bodys {
         padding: x(.5) x(.5);
         color: $white;
+        letter-spacing: 0.1em;
+        font-size: r(0.75rem);
 
         p, a, li {
             color: inherit;
             margin: 0;
+            font-size: inherit;
         }
     }
 

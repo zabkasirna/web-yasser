@@ -2251,20 +2251,25 @@ video.background {
   padding: 0.75rem 0.75rem; }
   .page-infos .page-info-header .info-title, .page-infos .page-info-header .info-subtitle {
     color: #F2F2F2;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    letter-spacing: 0.15em; }
   .page-infos .page-info-header .info-title {
     font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 3rem;
-    margin: 0; }
+    margin: 0;
+    letter-spacing: 0.15em; }
   .page-infos .page-info-header .info-subtitle {
     font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0; }
 .page-infos .page-info-bodys {
   padding: 0.75rem 0.75rem;
-  color: #F2F2F2; }
+  color: #F2F2F2;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem; }
   .page-infos .page-info-bodys p, .page-infos .page-info-bodys a, .page-infos .page-info-bodys li {
     color: inherit;
-    margin: 0; }
+    margin: 0;
+    font-size: inherit; }
 .page-infos .page-info-footer {
   padding: 0.75rem; }
   .page-infos .page-info-footer p {
