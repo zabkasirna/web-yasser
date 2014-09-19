@@ -2351,6 +2351,7 @@ video.background {
   float: left;
   background-color: transparent;
   padding: 0.5rem;
+  display: block;
   color: #000; }
   .thumb:before, .thumb:after {
     content: " ";

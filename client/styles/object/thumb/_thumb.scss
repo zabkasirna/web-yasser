@@ -12,6 +12,7 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
     width: $thumbs-width;
     height: $thumbs-height;
     overflow: hidden;
+
 }
 
 .thumb-deco {
@@ -52,6 +53,7 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
     float: left;
     background-color: transparent;
     padding: (.5rem);
+    display: block;
 
     // Default value, will be inherited
     color: $black;
