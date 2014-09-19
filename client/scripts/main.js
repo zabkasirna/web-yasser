@@ -13,6 +13,7 @@
     ,   uiNavigation = require('./module/ui/ui-navigation')
     ,   uiHome       = require('./module/ui/ui-home')
     ,   uiThumb      = require('./module/ui/ui-thumb')
+    ,   uiRelated    = require('./module/ui/ui-related')
     ;
 
     // Dynamic color
@@ -35,4 +36,8 @@
 
     // Thumbnails
     if ($('.thumbs').length) uiThumb.init($('.thumbs'));
+
+    // Relates
+    if ($('.relateds').length) uiRelated.init($('.relateds'));
+
 })(jQuery);
