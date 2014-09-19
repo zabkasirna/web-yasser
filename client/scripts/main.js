@@ -10,7 +10,7 @@
 
     var uiAsset      = require('./module/ui/ui-asset')
     ,   uiColor      = require('./module/ui/ui-color')
-    ,   uiNavigation = require('./module/ui/ui-navigation')
+    // ,   uiNavigation = require('./module/ui/ui-navigation')
     ,   uiHome       = require('./module/ui/ui-home')
     ,   uiThumb      = require('./module/ui/ui-thumb')
     ;
@@ -25,12 +25,12 @@
     $(window).on('resize', function() { uiAsset.rescaleImage(); });
 
     // Main navigation
-    var $navs = $('#navigation');
-    if ($navs.length) uiNavigation.init($navs);
+    // var $navs = $('#navigation');
+    // if ($navs.length) uiNavigation.init($navs);
 
     // Page navigation
-    if ($('.page-navigations').length)
-        uiNavigation.initPageNavigation($('page-navigations.has-infos').length);
+    // if ($('.page-navigations').length)
+    //     uiNavigation.initPageNavigation($('page-navigations.has-infos').length);
 
     // Home
     uiHome.init($('#home-heros'));
