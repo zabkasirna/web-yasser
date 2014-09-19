@@ -1985,7 +1985,7 @@ video.background {
 #navigation {
   position: absolute;
   left: 1.5rem;
-  top: 10.5rem;
+  top: 9rem;
   padding: 1.5rem 0;
   z-index: 5000;
   color: #000;
@@ -2283,10 +2283,11 @@ video.background {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  height: 9rem;
+  width: 4.5rem;
   z-index: 6000; }
-  #brands .brand-svg {
-    height: 100%; }
+  #brands > svg {
+    width: 100%;
+    margin-left: 5px; }
   #brands .has-color {
     -webkit-transition: fill 0.3s ease-out;
             transition: fill 0.3s ease-out; }

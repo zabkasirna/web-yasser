@@ -5,11 +5,12 @@
     position: absolute;
     top: x(0.5);
     left: x(0.5);
-    height: x(6);
+    width: x(3);
     z-index: 6000;
 
-    .brand-svg {
-        height: 100%;
+    & > svg {
+        width: 100%;
+        margin-left: 5px; //magic number
     }
 
     .has-color {
