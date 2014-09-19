@@ -2768,3 +2768,88 @@ p {
     width: inherit; }
   .page-navigations.has-neu .info-btn-togglers {
     width: 5rem; }
+
+.relateds {
+  -webkit-transition: left 0.5s ease-out;
+          transition: left 0.5s ease-out;
+  position: absolute;
+  left: -11.25rem;
+  top: 19.5rem;
+  /* @todo: magic number. replace immediately */
+  height: 18.75rem;
+  width: 12rem;
+  background-color: #FC0;
+  overflow: hidden; }
+  .relateds:before, .relateds:after {
+    content: " ";
+    display: table; }
+  .relateds:after {
+    clear: both; }
+  .relateds .page-selectors {
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    padding-right: 8px; }
+    .relateds .page-selectors .active {
+      color: #F00; }
+  .relateds .related-page {
+    padding: 4px 12px;
+    line-height: 1rem; }
+    .relateds .related-page a {
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: inherit; }
+  .relateds .related-toggler {
+    display: block;
+    height: 0.75rem;
+    width: 18.75rem;
+    position: absolute;
+    top: 9rem;
+    right: -9rem;
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    overflow: hidden;
+    text-transform: uppercase; }
+    .relateds .related-toggler p {
+      font-size: 0.5rem;
+      font-weight: bold; }
+    .relateds .related-toggler .toggler-text {
+      -webkit-transition: margin-top 0.5s ease-out 0.3s;
+              transition: margin-top 0.5s ease-out 0.3s;
+      height: 0.75rem;
+      margin: 0; }
+      .relateds .related-toggler .toggler-text:before, .relateds .related-toggler .toggler-text:after {
+        content: " ";
+        display: table; }
+      .relateds .related-toggler .toggler-text:after {
+        clear: both; }
+      .relateds .related-toggler .toggler-text .toggler-text-icon {
+        display: block;
+        width: 14px;
+        height: 0.75rem;
+        padding: 0 1px;
+        float: left;
+        background-color: #000; }
+      .relateds .related-toggler .toggler-text .toggler-text-span {
+        height: 0.75rem;
+        display: block;
+        line-height: 0.75rem;
+        padding-left: 1.125rem; }
+      .relateds .related-toggler .toggler-text:last-of-type .icon {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg); }
+      .relateds .related-toggler .toggler-text .icon {
+        position: relative;
+        top: -3px;
+        width: 0.75rem;
+        height: 0.75rem; }
+  .relateds.active {
+    left: 0; }
+    .relateds.active .related-toggler .toggler-text:first-child {
+      margin-top: -12px; }
+  .relateds .related-paginations {
+    position: absolute;
+    bottom: 0; }
