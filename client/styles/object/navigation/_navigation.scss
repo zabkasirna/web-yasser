@@ -88,7 +88,7 @@
         }
     }
 
-    .nav.hovered .nav-1-span { transform: translate(-18px, 18px); }
+    .nav-1.hovered .nav-1-span { transform: translate(-18px, 18px); }
 
     .open .nav-2 {
         @include transition(max-height .3s linear);

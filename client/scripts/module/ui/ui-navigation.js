@@ -1,7 +1,7 @@
 module.exports = {
     init: function(el) {
         var _scope = this;
-        el.find('.nav').each(function(i) {
+        el.find('.nav-1').each(function(i) {
 
             var _svgObj = $(this).find('.nav-1-object')[0]
             ,   _svgDoc
@@ -26,12 +26,13 @@ module.exports = {
 
             $(this).on('click', function(e) {
                 e.preventDefault();
-                _scope.toggle(el, $(this));
+                _scope.toggle(el, $(this).closest('.nav'));
             });
         });
     },
     toggle: function(parent, el) {
         el.each(function(index) {
+            console.log($(this));
             if($(this).hasClass('open')) $(this).removeClass('open');
             else $(this).addClass('open');
         });

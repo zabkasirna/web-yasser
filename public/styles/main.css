@@ -2070,7 +2070,7 @@ video.background {
       #navigation .nav-2 .nav-2-link:hover {
         color: #000;
         background-color: #F2F2F2; }
-  #navigation .nav.hovered .nav-1-span {
+  #navigation .nav-1.hovered .nav-1-span {
     -webkit-transform: translate(-18px, 18px);
         -ms-transform: translate(-18px, 18px);
             transform: translate(-18px, 18px); }
