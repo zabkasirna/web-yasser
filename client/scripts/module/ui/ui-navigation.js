@@ -1,7 +1,29 @@
 module.exports = {
     init: function(el) {
         var _scope = this;
-        el.find('.nav-1').each(function(i) {
+        el.find('.nav').each(function(i) {
+
+            var _svgObj = $(this).find('.nav-1-object')[0]
+            ,   _svgDoc
+            ,   _navEl
+            ;
+
+            _svgObj.addEventListener('load', function() {
+                _svgDoc = _svgObj.contentDocument;
+                _navEl  = _svgDoc.querySelector('.navigation-svg');
+            });
+
+            $(this).hover(
+                function() {
+                    $(this).toggleClass('hovered');
+                    _navEl.setAttribute('class', 'navigation-svg hovered');
+                },
+                function() {
+                    $(this).toggleClass('hovered');
+                    _navEl.setAttribute('class', 'navigation-svg');
+                }
+            );
+
             $(this).on('click', function(e) {
                 e.preventDefault();
                 _scope.toggle(el, $(this));
@@ -9,12 +31,12 @@ module.exports = {
         });
     },
     toggle: function(parent, el) {
-        var $lists = parent.find('.nav').not(el.parent());
-        $lists.each(function(index) {
+        el.each(function(index) {
             if($(this).hasClass('open')) $(this).removeClass('open');
+            else $(this).addClass('open');
         });
 
-        el.closest('li').toggleClass('open');
+        // el.toggleClass('open');
     },
     initPageNavigation:  function(hasInfo) {
         var $infoBtnTogglers = $('.info-btn-togglers')
