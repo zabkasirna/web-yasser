@@ -1659,9 +1659,9 @@ elements-of-type(html5-block) {
 
 @font-face {
   font-family: 'AltRegular';
-  src: url('fonts/yrflaunt-bold-webfont.eot');
+  src: url('fonts/yrflaunt-book-webfont.eot');
   /* IE9 Compat Modes */
-  src: url('fonts/yrflaunt-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/yrflaunt-bold-webfont.woff') format('woff'), url('fonts/yrflaunt-bold-webfont.ttf') format('truetype'), url('fonts/yrflaunt-bold-webfont.svg') format('svg');
+  src: url('fonts/yrflaunt-book-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/yrflaunt-book-webfont.woff') format('woff'), url('fonts/yrflaunt-book-webfont.ttf') format('truetype'), url('fonts/yrflaunt-book-webfont.svg') format('svg');
   /* Legacy iOS */
   font-style: normal;
   font-weight: 400; }
@@ -1691,61 +1691,61 @@ body {
   min-width: 320px;
   height: 100%;
   color: #000;
-  font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #bfbfbf; }
 
 h1 {
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.01em;
   font-weight: 200; }
 
 h2 {
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.01em;
   font-weight: 200; }
 
 h3 {
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.01em;
   font-weight: 200; }
 
 h4 {
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.01em;
   font-weight: 200; }
 
 h5 {
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.01em;
   font-weight: 200; }
 
 h6 {
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.01em;
   font-weight: 200; }
 
 h1.alt {
-  font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -1px; }
 
 h2.alt {
-  font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -1px; }
 
 h3.alt {
-  font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -1px; }
 
 h4.alt {
-  font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -1px; }
 
 h5.alt {
-  font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -1px; }
 
 h6.alt {
-  font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -1px; }
 
 p, li, b, strong, .bold, em, i, .italic {
@@ -1755,12 +1755,12 @@ p, li, b, strong, .bold, em, i, .italic {
   color: #000; }
 
 p, a, li {
-  font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 500;
   letter-spacing: 0.3px; }
 
 b, strong, .bold {
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700; }
 
 em, i, .italic {
@@ -1990,7 +1990,7 @@ video.background {
   z-index: 5000;
   color: #000;
   text-transform: uppercase;
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   #navigation ul {
     margin: 0;
     padding: 0; }
@@ -2113,7 +2113,7 @@ video.background {
     margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
-    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     letter-spacing: 0.01em;
     font-size: 10px;
     line-height: 1.5rem; }
@@ -2180,7 +2180,7 @@ video.background {
   height: 1.5rem;
   font-size: 0.75rem;
   line-height: 1.5rem;
-  font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   letter-spacing: -0.01em;
   text-align: left;
   text-transform: uppercase;
@@ -2254,12 +2254,12 @@ video.background {
     text-transform: uppercase;
     letter-spacing: 0.15em; }
   .page-infos .page-info-header .info-title {
-    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 3rem;
     margin: 0;
     letter-spacing: 0.15em; }
   .page-infos .page-info-header .info-subtitle {
-    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0; }
 .page-infos .page-info-bodys {
   padding: 0.75rem 0.75rem;
@@ -2396,12 +2396,12 @@ video.background {
   .thumb:hover .thumb-text .thumb-title, .thumb:hover .thumb-text .thumb-subtitle {
     color: #F2F2F2; }
   .thumb-text .thumb-title {
-    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     margin: 0;
     letter-spacing: 0.1em; }
   .thumb-text .thumb-subtitle {
-    font-family: SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 700;
     margin: 0; }
 
@@ -2444,7 +2444,7 @@ p {
   .home-hero-head h1 {
     color: #F2F2F2;
     margin: 0;
-    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
     line-height: 2.25rem;
     text-transform: uppercase;
@@ -2497,7 +2497,7 @@ p {
       text-align: center;
       color: #000;
       font-size: 12px;
-      font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
       line-height: 1.5rem;
       margin: 0; }
     .home-hero-body .home-hero-togglers .deco {
@@ -2605,7 +2605,7 @@ p {
   #wordings .wording-footer {
     font-size: 0.8rem;
     text-transform: uppercase;
-    font-family: SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-top: 18px solid #F2F2F2;
     padding: 1.125rem 0; }
 

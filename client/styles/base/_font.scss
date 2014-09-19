@@ -3,9 +3,9 @@ $font-url: 'fonts/';
 @include rb-font-face( 'SansBold',       'gotham-bold',              $font-url, 700, normal );
 @include rb-font-face( 'SansRegular',    'gotham-book',              $font-url, 400, normal );
 @include rb-font-face( 'AltBold',        'yrflaunt-bold-webfont',    $font-url, 700, normal );
-@include rb-font-face( 'AltRegular',     'yrflaunt-bold-webfont',    $font-url, 400, normal );
+@include rb-font-face( 'AltRegular',     'yrflaunt-book-webfont',    $font-url, 400, normal );
 
-$ff-sans-bold:      SansBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$ff-sans-regular:   SansRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$ff-alt-bold:       AltBold, 'SansBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$ff-alt-regular:    AltRegular, 'SansRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-bold:      AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-sans-regular:   AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-alt-bold:       SansBold, 'SansBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$ff-alt-regular:    SansRegular, 'SansRegular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
