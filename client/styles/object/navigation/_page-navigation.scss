@@ -139,12 +139,13 @@ $info-btns-width: x(7);
         .page-subnavigation-link {
             display: block;
             margin: 0;
-            font-size: r(0.625rem);
+            font-size: r(0.75rem);
+            font-family: $ff-sans-bold;
             line-height: r(1rem);
             color: $white;
             width: 100%;
             padding: x(.25) x(.25);
-            background-color: rgba($black, .75);
+            background-color: $black;
             text-transform: uppercase;
             &:hover {
                 background-color: $yellow;

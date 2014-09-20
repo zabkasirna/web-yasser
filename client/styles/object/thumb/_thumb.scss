@@ -12,7 +12,6 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
     width: $thumbs-width;
     height: $thumbs-height;
     overflow: hidden;
-
 }
 
 .thumb-deco {
@@ -99,7 +98,8 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
     }
 
     .thumb-title,
-    .thumb-subtitle {
+    .thumb-subtitle,
+    .thumb-overview {
         // Dynamic styles, will be inherited
         &.background--light { color: $black; }
         &.background--dark  { color: $white; }
@@ -128,8 +128,4 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
     top: 0;
     left: 50%;
     margin: 0 0 0 -106px;
-}
-
-p {
-    font-size: 96px;
 }

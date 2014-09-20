@@ -9,8 +9,10 @@ module.exports = {
         ,   isSwap         = false
         ;
 
+        var hasNeu = el.hasClass('has-neu'); console.log('hasNeu' ,hasNeu);
+
         var _thumbN = $thumbs.length
-        ,   _thumbGroupsLimit = 6
+        ,   _thumbGroupsLimit = hasNeu ? 4 : 6
         ,   _thumbGroupN = (_thumbN > _thumbGroupsLimit) ? Math.ceil(_thumbN / _thumbGroupsLimit) : 1
         ,   _thumbStart = 0
         ,   _thumbEnd = _thumbGroupN
@@ -37,7 +39,7 @@ module.exports = {
         $thumbs.each(function(i) {
             $(this).removeClass('is-swap');
             isSwap = Math.random() >= 0.5 ? isSwap : !isSwap;
-            if (isSwap) $(this).addClass('is-swap');
+            if (isSwap && !hasNeu) $(this).addClass('is-swap');
         });
 
         // dynamically create page-selector

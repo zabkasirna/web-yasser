@@ -1,9 +1,85 @@
-.page-navigations.has-neu {
-    width: 15.75rem;
-    .page-navigation {
-        width: inherit;
+.has-neu {
+    // Navigation
+
+    &.page-navigations {
+        top: x(1);
+        right: r(12rem);
+        width: r(35rem);
+        bottom: auto;
     }
-    .info-btn-togglers {
-        width: 5rem;
+
+    // Thumb
+
+    &.thumbs {
+        top: r(3.055rem);
+        bottom: auto;
+        width: r(35rem);
+        height: r(40rem);
+    }
+
+    .thumb-group {
+        width: r(35rem);
+    }
+
+    .thumb {
+        width: 100%;
+    }
+
+    .thumb-images,
+    .thumb-texts {
+        float: left;
+    }
+
+    .thumb-images {
+        background-color: $red;
+        width: r(9rem);
+        height: r(9rem);
+
+        .thumb-image {
+            height: r(9rem);
+            width: auto;
+            margin: 0 0 0 r(-4.5rem);
+        }
+    }
+
+    .thumb-texts {
+        margin: 0 0 0 x(.5);
+        width: r(24rem);
+        height: r(9rem);
+
+        .thumb-text {
+            max-height: r(10rem);
+            height: r(8.75rem);
+            overflow: hidden;
+        }
+    }
+
+    .thumb-title {
+        background-color: $black;
+        color: $white;
+        height: x(1);
+        line-height: x(1);
+        padding: 0 x(.25);
+        font-family: $ff-sans-bold;
+
+        &.background--light { color: $white; }
+    }
+
+    .thumb-subtitle {
+        height: x(1);
+        line-height: x(1);
+        padding: 0 x(.25);
+        font-size: 11px;
+        font-family: $ff-sans-bold;
+        letter-spacing: 0.1em;
+    }
+
+    .thumb-overview {
+        padding: 0 x(.25);
+        font-size: 11px;
+        line-height: x(1);
+        letter-spacing: 0.05em;
+        text-transform: initial;
+        margin-top: 0;
     }
 }

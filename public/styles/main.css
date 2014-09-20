@@ -2224,12 +2224,13 @@ video.background {
   .page-navigation #page-subnavigations .page-subnavigation-link {
     display: block;
     margin: 0;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
+    font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     line-height: 1rem;
     color: #F2F2F2;
     width: 100%;
     padding: 0.375rem 0.375rem;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #000;
     text-transform: uppercase; }
     .page-navigation #page-subnavigations .page-subnavigation-link:hover {
       background-color: #FC0;
@@ -2460,11 +2461,11 @@ video.background {
     font-size: inherit;
     line-height: inherit;
     color: inherit; }
-  .thumb-text .thumb-title.background--light, .thumb-text .thumb-subtitle.background--light {
+  .thumb-text .thumb-title.background--light, .thumb-text .thumb-subtitle.background--light, .thumb-text .thumb-overview.background--light {
     color: #000; }
-  .thumb-text .thumb-title.background--dark, .thumb-text .thumb-subtitle.background--dark {
+  .thumb-text .thumb-title.background--dark, .thumb-text .thumb-subtitle.background--dark, .thumb-text .thumb-overview.background--dark {
     color: #F2F2F2; }
-  .thumb:hover .thumb-text .thumb-title, .thumb:hover .thumb-text .thumb-subtitle {
+  .thumb:hover .thumb-text .thumb-title, .thumb:hover .thumb-text .thumb-subtitle, .thumb:hover .thumb-text .thumb-overview {
     color: #F2F2F2; }
   .thumb-text .thumb-title {
     font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -2484,9 +2485,6 @@ video.background {
   top: 0;
   left: 50%;
   margin: 0 0 0 -106px; }
-
-p {
-  font-size: 96px; }
 
 #home-heros {
   display: table;
@@ -2834,12 +2832,61 @@ p {
   vertical-align: super;
   font-size: 0.5em; }
 
-.page-navigations.has-neu {
-  width: 15.75rem; }
-  .page-navigations.has-neu .page-navigation {
-    width: inherit; }
-  .page-navigations.has-neu .info-btn-togglers {
-    width: 5rem; }
+.has-neu.page-navigations {
+  top: 1.5rem;
+  right: 12rem;
+  width: 35rem;
+  bottom: auto; }
+.has-neu.thumbs {
+  top: 3.055rem;
+  bottom: auto;
+  width: 35rem;
+  height: 40rem; }
+.has-neu .thumb-group {
+  width: 35rem; }
+.has-neu .thumb {
+  width: 100%; }
+.has-neu .thumb-images, .has-neu .thumb-texts {
+  float: left; }
+.has-neu .thumb-images {
+  background-color: #F00;
+  width: 9rem;
+  height: 9rem; }
+  .has-neu .thumb-images .thumb-image {
+    height: 9rem;
+    width: auto;
+    margin: 0 0 0 -4.5rem; }
+.has-neu .thumb-texts {
+  margin: 0 0 0 0.75rem;
+  width: 24rem;
+  height: 9rem; }
+  .has-neu .thumb-texts .thumb-text {
+    max-height: 10rem;
+    height: 8.75rem;
+    overflow: hidden; }
+.has-neu .thumb-title {
+  background-color: #000;
+  color: #F2F2F2;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 0.375rem;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  .has-neu .thumb-title.background--light {
+    color: #F2F2F2; }
+.has-neu .thumb-subtitle {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 0.375rem;
+  font-size: 11px;
+  font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1em; }
+.has-neu .thumb-overview {
+  padding: 0 0.375rem;
+  font-size: 11px;
+  line-height: 1.5rem;
+  letter-spacing: 0.05em;
+  text-transform: initial;
+  margin-top: 0; }
 
 .relateds {
   -webkit-transition: left 0.5s ease-out;

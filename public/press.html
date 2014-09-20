@@ -111,17 +111,98 @@
 
         <div id="page">
             <!-- On page navigation -->
-            <div class="page-navigations has-neu">
+            <div class="page-navigations has-thumbs has-neu">
                 <!-- @todo: Put page info here -->
                 <div class="page-navigation recolor">
                     <div class="info-btns">
                         <a class="info-btn-icons" href="javascript:void(0)">i</a>
                         <a class="info-btn-togglers recolor" href="javascript:void(0)">
-                            <p class="info-btn-toggler">all</p>
-                            <p class="info-btn-toggler">show all</p>
+                            <p class="info-btn-toggler">select year</p>
+                            <p class="info-btn-toggler" data-project>2011</p>
                         </a>
                     </div>
+                    <!--
+                        .page-selectors below will be automatically populated by page selector
+                        depends on how many .thumb-group exists on the page, on load
+                    -->
                     <ul class="page-selectors recolor"></ul>
+
+                    <ul id="page-subnavigations" >
+                        <li class="page-subnavigation-list"><a class="page-subnavigation-link" data-project="2014" href="#">2014</a></li>
+                        <li class="page-subnavigation-list"><a class="page-subnavigation-link" data-project="2013" href="#">2013</a></li>
+                        <li class="page-subnavigation-list"><a class="page-subnavigation-link" data-project="2012" href="#">2012</a></li>
+                        <li class="page-subnavigation-list"><a class="page-subnavigation-link" data-project="2011" href="#">2011</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="thumbs has-neu">
+                <div class="thumb-deco recolor"></div>
+                <div class="thumb-groups" data-slide="0">
+                        <!--
+                            All .thumb below will be automatically wrapped
+                            inside several .thumb-group on page load
+                        -->
+                        <a href="werk-detail.html" data-id="1" class="thumb">
+                            <div class="thumb-images">
+                                <img class="thumb-image" src="assets/images/neu-thumb/neu-thub-0-0.jpg">
+                            </div>
+                            <div class="thumb-texts">
+                                <div class="thumb-text">
+                                    <h1 class="thumb-title recolor">xsml city slickers</h1>
+                                    <p class="thumb-subtitle recolor">(x)sml</p>
+                                    <p class="thumb-overview recolor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nisi dignissimos nesciunt iure. Quidem blanditiis dolor, praesentium doloremque velit quis illum! Fugiat doloribus ducimus libero facere quas necessitatibus accusamus et, commodi sed hic repellendus quidem cupiditate.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="werk-detail.html" data-id="1" class="thumb">
+                            <div class="thumb-images">
+                                <img class="thumb-image" src="assets/images/neu-thumb/neu-thub-0-0.jpg">
+                            </div>
+                            <div class="thumb-texts">
+                                <div class="thumb-text">
+                                    <h1 class="thumb-title recolor">xsml city slickers</h1>
+                                    <p class="thumb-subtitle recolor">(x)sml</p>
+                                    <p class="thumb-overview recolor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nisi dignissimos nesciunt iure. Quidem blanditiis dolor, praesentium doloremque velit quis illum! Fugiat doloribus ducimus libero facere quas necessitatibus accusamus et, commodi sed hic repellendus quidem cupiditate.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="werk-detail.html" data-id="1" class="thumb">
+                            <div class="thumb-images">
+                                <img class="thumb-image" src="assets/images/neu-thumb/neu-thub-0-0.jpg">
+                            </div>
+                            <div class="thumb-texts">
+                                <div class="thumb-text">
+                                    <h1 class="thumb-title recolor">xsml city slickers</h1>
+                                    <p class="thumb-subtitle recolor">(x)sml</p>
+                                    <p class="thumb-overview recolor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nisi dignissimos nesciunt iure. Quidem blanditiis dolor, praesentium doloremque velit quis illum! Fugiat doloribus ducimus libero facere quas necessitatibus accusamus et, commodi sed hic repellendus quidem cupiditate.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="werk-detail.html" data-id="1" class="thumb">
+                            <div class="thumb-images">
+                                <img class="thumb-image" src="assets/images/neu-thumb/neu-thub-0-0.jpg">
+                            </div>
+                            <div class="thumb-texts">
+                                <div class="thumb-text">
+                                    <h1 class="thumb-title recolor">xsml city slickers</h1>
+                                    <p class="thumb-subtitle recolor">(x)sml</p>
+                                    <p class="thumb-overview recolor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nisi dignissimos nesciunt iure. Quidem blanditiis dolor, praesentium doloremque velit quis illum! Fugiat doloribus ducimus libero facere quas necessitatibus accusamus et, commodi sed hic repellendus quidem cupiditate.</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="werk-detail.html" data-id="1" class="thumb">
+                            <div class="thumb-images">
+                                <img class="thumb-image" src="assets/images/neu-thumb/neu-thub-0-0.jpg">
+                            </div>
+                            <div class="thumb-texts">
+                                <div class="thumb-text">
+                                    <h1 class="thumb-title recolor">xsml city slickers</h1>
+                                    <p class="thumb-subtitle recolor">(x)sml</p>
+                                    <p class="thumb-overview recolor">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis nisi dignissimos nesciunt iure. Quidem blanditiis dolor, praesentium doloremque velit quis illum! Fugiat doloribus ducimus libero facere quas necessitatibus accusamus et, commodi sed hic repellendus quidem cupiditate.</p>
+                                </div>
+                            </div>
+                        </a>
                 </div>
             </div>
         </div>
