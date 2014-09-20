@@ -3,8 +3,8 @@
     @include transition(left .5s ease-out);
     position: absolute;
     left: r(-11.25rem);
-    top: x(13); /* @todo: magic number. replace immediately */
-    height: r(18.75rem);
+    bottom: x(3); /* @todo: magic number. replace immediately */
+    height: r(16.375rem);
     width: r(12rem);
     background-color: $yellow;
     overflow: hidden;
@@ -34,10 +34,10 @@
     .related-toggler {
         display: block;
         height: x(0.5);
-        width: r(18.75rem);
+        width: r(16.375rem);
         position: absolute;
-        top: x(6);
-        right: x(-6);
+        top: 125px; /* (width / 2) - height */
+        right: -125px; /* ((width / 2) - height) * -1 */
         transform: rotate(-90deg);
         overflow: hidden;
         text-transform: uppercase;

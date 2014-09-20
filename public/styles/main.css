@@ -2509,11 +2509,11 @@ p {
   display: block;
   width: 100%;
   padding: 0.75rem 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: 1px solid #000;
+  background-color: rgba(242, 242, 242, 0.5);
+  border: 2px solid #000;
   border-bottom: none; }
   .home-hero-head h1 {
-    color: #F2F2F2;
+    color: #000;
     margin: 0;
     font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
@@ -2530,8 +2530,8 @@ p {
   position: relative;
   padding: 0;
   height: 1.5rem;
-  border-left: 1px solid #000;
-  border-right: 1px solid #000; }
+  border-left: 2px solid #000;
+  border-right: 2px solid #000; }
   .home-hero-body:before, .home-hero-body:after {
     content: " ";
     display: table; }
@@ -2592,6 +2592,7 @@ p {
       .home-hero-body .home-hero-togglers .home-hero-toggler:active {
         color: #000; }
       .home-hero-body .home-hero-togglers .home-hero-toggler:hover {
+        cursor: pointer;
         background-color: #F00; }
       .home-hero-body .home-hero-togglers .home-hero-toggler object {
         -webkit-transition: -webkit-transform 0.3s ease-out;
@@ -2845,9 +2846,9 @@ p {
           transition: left 0.5s ease-out;
   position: absolute;
   left: -11.25rem;
-  top: 19.5rem;
+  bottom: 4.5rem;
   /* @todo: magic number. replace immediately */
-  height: 18.75rem;
+  height: 16.375rem;
   width: 12rem;
   background-color: #FC0;
   overflow: hidden; }
@@ -2874,10 +2875,12 @@ p {
   .relateds .related-toggler {
     display: block;
     height: 0.75rem;
-    width: 18.75rem;
+    width: 16.375rem;
     position: absolute;
-    top: 9rem;
-    right: -9rem;
+    top: 125px;
+    /* (width / 2) - height */
+    right: -125px;
+    /* ((width / 2) - height) * -1 */
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
