@@ -6,9 +6,10 @@
     min-height: 100%;
     display: table;
 
-    p,a {
-        font-size: inherit;
-        line-height: inherit;
+    p, a {
+        font-size: 0.70rem;
+        line-height: 1.2rem;
+        margin: 0;
     }
     
     .contact {
@@ -18,13 +19,13 @@
     
     .contact {
         & > *:not(:first-child), & > *:not(:last-child) {
-            border-left: 1px solid $black;
-            border-right: 1px solid $black;
-            padding: 0 x(0.25);
+            border-left: 2px solid $black;
+            border-right: 2px solid $black;
+            padding: 0 x(0.25) r(1rem);
         }
 
         & > *:first-child, & > *:last-child {
-            border: 1px solid $black;
+            border: 2px solid $black;
         }
         & > *:first-child {
             border-bottom: none;
@@ -36,26 +37,82 @@
         }
     }
 
-    .contact-email {
+    .contact-address {
+        margin-bottom: x(1);
+    }
+
+    .contact-emails {
         font-size: 0.70rem;
         line-height: 1.2rem;
-        text-decoration: underline;
-
-
         a {
+            text-decoration: underline;
             background-image: none;
         }
     }
 
-    p {
-        font-size: 0.70rem;
-        line-height: 1.2rem;
-        margin: 0;
-    }
-
-    .contact-credit {
+    .contact-credits {
+        @include transition(height .3s ease-out);
         background-color: $yellow;
         margin: 0;
+        position: absolute;
+        bottom: 1.5rem;
+        width: 197px;
+        height: 27px;
+        max-height: 27px;;
+        overflow: hidden;
+
+        &.is-open {
+            height: 197px;
+            max-height: 197px;
+        }
+
+        .contact-credit-head {
+            font-family: $ff-sans-bold;
+            height: x(1);
+            line-height: x(1);
+            font-size: 11px;
+            padding-left: x(1)
+        }
+
+        .contact-credit-body {
+            // max-height: r(10rem);
+            // height: r(10rem);
+            overflow: scroll;
+
+            font-size: 11px;
+            margin: 0; padding: 0;
+            text-transform: uppercase;
+
+            p, a, li, {
+                font-size: inherit;
+                margin: inherit;
+                padding: inherit;
+                text-transform: inherit;
+            }
+
+            .credit-label {
+                font-family: $ff-sans-bold;
+            }
+            .credit-name {
+                font-family: $ff-sans-regular;
+            }
+        }
+
+        .contact-credit-toggler {
+            position: absolute;
+            top: 2px;
+            left: 1px;
+            display: block;
+            width: 22px;
+            height: 22px;
+            line-height: x(1);
+            background-color: $black;
+            color: $white;
+            text-align: center;
+            font-size: 12px;
+
+            &:hover { background-color: $red; }
+        }
     }
 
     .yasser-rizky {

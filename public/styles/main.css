@@ -2765,36 +2765,81 @@ video.background {
   #contacts:after {
     clear: both; }
   #contacts p, #contacts a {
-    font-size: inherit;
-    line-height: inherit; }
+    font-size: 0.7rem;
+    line-height: 1.2rem;
+    margin: 0; }
   #contacts .contact {
     display: table-cell;
     vertical-align: bottom; }
   #contacts .contact > *:not(:first-child), #contacts .contact > *:not(:last-child) {
-    border-left: 1px solid #000;
-    border-right: 1px solid #000;
-    padding: 0 0.375rem; }
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    padding: 0 0.375rem 1rem; }
   #contacts .contact > *:first-child, #contacts .contact > *:last-child {
-    border: 1px solid #000; }
+    border: 2px solid #000; }
   #contacts .contact > *:first-child {
     border-bottom: none;
     padding: 0.75rem 0.375rem 1rem; }
   #contacts .contact > *:last-child {
     border-top: none;
     padding: 0 0.375rem; }
-  #contacts .contact-email {
+  #contacts .contact-address {
+    margin-bottom: 1.5rem; }
+  #contacts .contact-emails {
     font-size: 0.7rem;
-    line-height: 1.2rem;
-    text-decoration: underline; }
-    #contacts .contact-email a {
+    line-height: 1.2rem; }
+    #contacts .contact-emails a {
+      text-decoration: underline;
       background-image: none; }
-  #contacts p {
-    font-size: 0.7rem;
-    line-height: 1.2rem;
-    margin: 0; }
-  #contacts .contact-credit {
+  #contacts .contact-credits {
+    -webkit-transition: height 0.3s ease-out;
+            transition: height 0.3s ease-out;
     background-color: #FC0;
-    margin: 0; }
+    margin: 0;
+    position: absolute;
+    bottom: 1.5rem;
+    width: 197px;
+    height: 27px;
+    max-height: 27px;
+    overflow: hidden; }
+    #contacts .contact-credits.is-open {
+      height: 197px;
+      max-height: 197px; }
+    #contacts .contact-credits .contact-credit-head {
+      font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      height: 1.5rem;
+      line-height: 1.5rem;
+      font-size: 11px;
+      padding-left: 1.5rem; }
+    #contacts .contact-credits .contact-credit-body {
+      overflow: scroll;
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase; }
+      #contacts .contact-credits .contact-credit-body p, #contacts .contact-credits .contact-credit-body a, #contacts .contact-credits .contact-credit-body li {
+        font-size: inherit;
+        margin: inherit;
+        padding: inherit;
+        text-transform: inherit; }
+      #contacts .contact-credits .contact-credit-body .credit-label {
+        font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+      #contacts .contact-credits .contact-credit-body .credit-name {
+        font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    #contacts .contact-credits .contact-credit-toggler {
+      position: absolute;
+      top: 2px;
+      left: 1px;
+      display: block;
+      width: 22px;
+      height: 22px;
+      line-height: 1.5rem;
+      background-color: #000;
+      color: #F2F2F2;
+      text-align: center;
+      font-size: 12px; }
+      #contacts .contact-credits .contact-credit-toggler:hover {
+        background-color: #F00; }
   #contacts .yasser-rizky {
     letter-spacing: 0.33em;
     font-weight: bold; }

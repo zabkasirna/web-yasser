@@ -81,4 +81,17 @@
     $('.page-tool-btn[data-tool="image"]')
         .on('click', function(e) { createViewer(); });
 
+    // Shame
+    var isOpen = false;
+    function updateInfoCredit() {
+        isOpen = !isOpen;
+        if (!isOpen)  $('.contact-credits').removeClass('is-open');
+        else $('.contact-credits').addClass('is-open');
+    }
+
+    $('.contact-credit-toggler').on('click', function(e) {
+        e.preventDefault();
+        updateInfoCredit();
+    });
+
 })(jQuery);
