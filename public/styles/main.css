@@ -2394,8 +2394,16 @@ video.background {
 .page-infos .page-info-footer {
   padding: 0.75rem; }
   .page-infos .page-info-footer p {
+    font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px; }
+  .page-infos .page-info-footer a {
+    text-decoration: underline;
+    font-size: 11px; }
+  .page-infos .page-info-footer p, .page-infos .page-info-footer a {
     margin: 0;
     color: #F2F2F2; }
+  .page-infos .page-info-footer a:hover {
+    color: #F00; }
 
 #brands {
   display: block;
