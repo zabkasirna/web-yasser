@@ -3,6 +3,8 @@ module.exports = {
         var _scope = this;
         el.find('.nav-1').each(function(i) {
 
+            var $el = $(this);
+
             var _svgObj = $(this).find('.nav-1-object')[0]
             ,   _svgDoc
             ,   _navEl
@@ -11,18 +13,18 @@ module.exports = {
             _svgObj.addEventListener('load', function() {
                 _svgDoc = _svgObj.contentDocument;
                 _navEl  = _svgDoc.querySelector('.navigation-svg');
-            });
 
-            $(this).hover(
-                function() {
-                    $(this).toggleClass('hovered');
-                    _navEl.setAttribute('class', 'navigation-svg hovered');
-                },
-                function() {
-                    $(this).toggleClass('hovered');
-                    _navEl.setAttribute('class', 'navigation-svg');
-                }
-            );
+                $el.hover(
+                    function() {
+                        $(this).toggleClass('hovered');
+                        _navEl.setAttribute('class', 'navigation-svg hovered');
+                    },
+                    function() {
+                        $(this).toggleClass('hovered');
+                        _navEl.setAttribute('class', 'navigation-svg');
+                    }
+                );
+            });
 
             $(this).on('click', function(e) {
                 e.preventDefault();
