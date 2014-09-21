@@ -1950,9 +1950,58 @@ pre, code {
   z-index: 9000;
   background-color: #FFF;
   pointer-events: none; }
-  #preloaders.page-loaded {
-    background-color: rgba(255, 255, 255, 0);
-    z-index: -9000; }
+
+#preloaders.page-loaded {
+  background-color: rgba(255, 255, 255, 0);
+  z-index: -9000; }
+
+#preloader {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -48px 0 0 -48px; }
+  #preloader #y1, #preloader #y2, #preloader #y3 {
+    fill: #F2F2F2; }
+  #preloader #y1, #preloader #y2, #preloader #y3 {
+    -webkit-animation-name: preload-progress;
+            animation-name: preload-progress;
+    -webkit-animation-duration: 0.9s;
+            animation-duration: 0.9s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; }
+  #preloader #y1 {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s; }
+  #preloader #y2 {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s; }
+  #preloader #y3 {
+    -webkit-animation-delay: 0.9s;
+            animation-delay: 0.9s; }
+
+.page-loaded #preloader {
+  display: none; }
+
+@-webkit-keyframes preload-progress {
+  0%, 100% {
+    fill: rgba(0, 0, 0, 0); }
+
+  25%, 75% {
+    fill: black; } }
+
+@keyframes preload-progress {
+  0%, 100% {
+    fill: rgba(0, 0, 0, 0); }
+
+  25%, 75% {
+    fill: black; } }
 
 .background {
   position: fixed;
