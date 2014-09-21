@@ -32,7 +32,6 @@ module.exports = {
     },
     toggle: function(parent, el) {
         el.each(function(index) {
-            console.log($(this));
             if($(this).hasClass('open')) $(this).removeClass('open');
             else $(this).addClass('open');
         });

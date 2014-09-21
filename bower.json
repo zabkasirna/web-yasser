@@ -32,6 +32,7 @@
     "backgroundCheck": "~1.2.2",
     "imagesloaded": "~3.1.8",
     "BigVideo.js": "~1.1.3",
-    "jquery.parallaxify": "*"
+    "jquery.parallaxify": "*",
+    "cropit": "~0.1.8"
   }
 }

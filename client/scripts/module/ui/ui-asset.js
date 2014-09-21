@@ -105,7 +105,5 @@ module.exports = {
         });
 
         self.preloader.addClass('page-loaded');
-
-        console.log($imgs.eq(0).height(), $parallax.height());
     }
 };
