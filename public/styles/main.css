@@ -2974,3 +2974,68 @@ video.background {
   .relateds .related-paginations {
     position: absolute;
     bottom: 0; }
+
+#viewers {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 8900;
+  padding: 3rem 4.5rem;
+  display: table; }
+
+#viewers .cropit-image-input {
+  display: none; }
+#viewers .cropit-image-zoom-input {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  width: 12rem;
+  margin: 0 0 0 -6rem; }
+#viewers .cropit-image-preview {
+  display: table-cell;
+  vertical-align: middle;
+  min-height: 15rem;
+  min-width: 15rem;
+  width: 100%;
+  height: 100%; }
+  #viewers .cropit-image-preview:hover {
+    cursor: move; }
+#viewers .viewer-preloader {
+  display: none;
+  position: absolute;
+  width: 12rem;
+  height: 1.5rem;
+  top: 50%;
+  left: 50%;
+  margin: -0.75rem 0 0 -6rem; }
+  #viewers .viewer-preloader p {
+    text-transform: uppercase;
+    color: #F2F2F2;
+    text-align: center;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    width: 100%;
+    display: block;
+    margin: 0; }
+#viewers .viewer-close {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #F2F2F2;
+  background-color: #000;
+  -o-border-radius: 50%;
+  border-radius: 50%; }
+  #viewers .viewer-close:hover {
+    background-color: #FC0;
+    color: #000; }
+
+#viewers.pre .cropit-image-zoom-input, #viewers.pre .cropit-image-preview, #viewers.pre .cropit-image-zoom-input, #viewers.pre .viewer-close {
+  display: none; }
+#viewers.pre .viewer-preloader {
+  display: block; }

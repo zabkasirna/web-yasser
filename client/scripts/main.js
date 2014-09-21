@@ -40,4 +40,45 @@
     // Relates
     if ($('.relateds').length) uiRelated.init($('.relateds'));
 
+    // Shame
+    // Move to it's own module
+    $('body').on('click', '.viewer-close', function(e) {
+        e.preventDefault();
+        $('#viewers').remove();
+    });
+
+    var createViewer = function() {
+        var $backgroundEl = $('.background')
+        ,   imgSrc = $backgroundEl.attr('src')
+        ,   viewersTemplate =
+                '<div id="viewers" class="pre">'
+                    +'<div class="viewer-preloader"><p>loading image...</p></div>'
+                    +'<div class="cropit-image-preview"></div>'
+                    +'<input type="range" class="cropit-image-zoom-input">'
+                    +'<input type="file" class="cropit-image-input">'
+                    +'<a href="#" class="viewer-close">x</a>'
+                +'</div>'
+        ;
+
+        function removePre() {
+            setTimeout(function() {
+                $('#viewers').removeClass('pre');
+            }, 1000);
+        }
+
+        if ($('a[data-tool="image"')) {
+            $('body').append(viewersTemplate);
+
+            if($('#viewers').length) {
+                $('#viewers').cropit({
+                    imageState: { src: imgSrc },
+                    onImageLoaded: removePre
+                });
+            }
+        }
+    };
+
+    $('.page-tool-btn[data-tool="image"]')
+        .on('click', function(e) { createViewer(); });
+
 })(jQuery);

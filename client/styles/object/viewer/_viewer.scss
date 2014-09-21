@@ -1,0 +1,80 @@
+#viewers {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, .75);
+    z-index: 8900;
+
+    padding: x(2) x(3);
+    display: table;
+}
+
+#viewers {
+    .cropit-image-input { display: none; }
+    .cropit-image-zoom-input {
+        position: absolute;
+        bottom: x(1);
+        left: 50%;
+        width: x(8);
+        margin: 0 0 0 x(-4);
+    }
+
+    .cropit-image-preview {
+        display: table-cell;
+        vertical-align: middle;
+        min-height: x(10);
+        min-width: x(10);
+        width: 100%;
+        height: 100%;
+
+        &:hover { cursor: move; }
+    }
+
+    .viewer-preloader {
+        display: none;
+
+        position: absolute;
+        width: x(8);
+        height: x(1);
+        top: 50%; left: 50%;
+        margin: x(-0.5) 0 0 x(-4);
+
+        p {
+            text-transform: uppercase;
+            color: $white;
+            text-align: center;
+            height: x(1);
+            line-height: x(1);
+            width: 100%;
+            display: block;
+            margin: 0;
+        }
+    }
+
+    .viewer-close {
+        display: block;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: x(1);
+        height: x(1);
+        line-height: x(1);
+        text-align: center;
+        color: $white;
+        background-color: $black;
+        @include border-radius(50%);
+
+        &:hover {
+            background-color: $yellow;
+            color: $black;
+        }
+    }
+}
+
+#viewers.pre {
+    .cropit-image-zoom-input,
+    .cropit-image-preview,
+    .cropit-image-zoom-input,
+    .viewer-close { display: none; }
+    .viewer-preloader { display: block; }
+}
