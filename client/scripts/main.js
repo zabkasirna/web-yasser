@@ -14,6 +14,7 @@
     ,   uiHome       = require('./module/ui/ui-home')
     ,   uiThumb      = require('./module/ui/ui-thumb')
     ,   uiRelated    = require('./module/ui/ui-related')
+    ,   uiTouch      = require('./module/ui/ui-touch')
     ;
 
     // Dynamic color
@@ -93,5 +94,7 @@
         e.preventDefault();
         updateInfoCredit();
     });
+
+    uiTouch.init();
 
 })(jQuery);
