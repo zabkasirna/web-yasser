@@ -32,6 +32,7 @@ module.exports = {
             });
         });
     },
+
     toggle: function(parent, el) {
         el.each(function(index) {
             if($(this).hasClass('open')) $(this).removeClass('open');
