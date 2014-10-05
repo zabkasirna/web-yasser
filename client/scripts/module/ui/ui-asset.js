@@ -35,7 +35,7 @@ module.exports = {
         if (isTouch) return;
 
         var BVSources = []
-        ,   BVSourcesType = ['mp4', 'webm', 'ogv']
+        ,   BVSourcesType = ['mp4', 'webm', 'ogv', 'flv']
         ;
 
         for (var i = 0; i < BVSourcesType.length; i ++) {
@@ -46,7 +46,7 @@ module.exports = {
         }
 
         var BV = new $.BigVideo();
-        BV.init();
+        BV.init({ useFlashForFirefox: false });
         BV.show(BVSources, {
             ambient: true
         });

@@ -34,6 +34,8 @@ body {
     display: block;
     min-width: 320px;
     height: 100%;
+    max-height: 100%;
+    overflow: hidden;
     color: $black;
     font-family: $ff-sans-regular;
     background-color: darken($white, 20%);
