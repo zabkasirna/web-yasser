@@ -1,7 +1,7 @@
 #wordings {
     @include clearfix;
     float: right;
-    width: 50%;
+    max-width: 40%;
     height: 100%;
     min-height: 100%;
     display: table;
@@ -27,12 +27,12 @@
     }
 
     quote {
-            font-size: inherit;
+            font-size: 7.5px;
             line-height: inherit;
             margin: 0;
             text-transform: inherit;
             color:inherit;
-            letter-spacing: 0.4em;
+            letter-spacing: 0.45rem;
         }
 
     .wording {
@@ -74,7 +74,7 @@
     }
 
     .wording-footer {
-        font-size: r(0.8rem);
+        font-size: r(0.10rem);
         text-transform: uppercase;
         font-family: $ff-sans-bold;
         border-top: 18px solid $white;

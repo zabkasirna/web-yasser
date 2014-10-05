@@ -282,9 +282,10 @@ $info-btns-width: x(7);
 
     .page-info-bodys {
         padding: x(.5) x(.5);
+        font-family: $ff-sans-regular;
         color: $white;
-        letter-spacing: 0.1em;
-        font-size: r(0.75rem);
+        letter-spacing: 0.20em;
+        font-size: r(0.70rem);
 
         p, a, li {
             color: inherit;

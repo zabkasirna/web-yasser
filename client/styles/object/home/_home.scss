@@ -20,7 +20,7 @@
     display: block;
     width: 100%;
     padding: x(.5) 0;
-    background-color: rgba($white, 0.5);
+    background-color: transparent;
     border: 2px solid $black;
     border-bottom: none;
 
@@ -46,6 +46,7 @@
     height: r(1.5rem);
     border-left: 2px solid $black;
     border-right: 2px solid $black;
+    border-bottom: 2px solid $black;
 
     p:not(.deco) {
         color: $black;

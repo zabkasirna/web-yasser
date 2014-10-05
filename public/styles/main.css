@@ -2386,9 +2386,10 @@ video.background {
     margin: 0; }
 .page-infos .page-info-bodys {
   padding: 0.75rem 0.75rem;
+  font-family: AltRegular, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #F2F2F2;
-  letter-spacing: 0.1em;
-  font-size: 0.75rem; }
+  letter-spacing: 0.2em;
+  font-size: 0.7rem; }
   .page-infos .page-info-bodys p, .page-infos .page-info-bodys a, .page-infos .page-info-bodys li {
     color: inherit;
     margin: 0;
@@ -2568,7 +2569,7 @@ video.background {
   display: block;
   width: 100%;
   padding: 0.75rem 0;
-  background-color: rgba(242, 242, 242, 0.5);
+  background-color: transparent;
   border: 2px solid #000;
   border-bottom: none; }
   .home-hero-head h1 {
@@ -2590,7 +2591,8 @@ video.background {
   padding: 0;
   height: 1.5rem;
   border-left: 2px solid #000;
-  border-right: 2px solid #000; }
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000; }
   .home-hero-body:before, .home-hero-body:after {
     content: " ";
     display: table; }
@@ -2676,7 +2678,7 @@ video.background {
 
 #wordings {
   float: right;
-  width: 50%;
+  max-width: 40%;
   height: 100%;
   min-height: 100%;
   display: table;
@@ -2701,12 +2703,12 @@ video.background {
     color: inherit;
     letter-spacing: 0.1em; }
   #wordings quote {
-    font-size: inherit;
+    font-size: 7.5px;
     line-height: inherit;
     margin: 0;
     text-transform: inherit;
     color: inherit;
-    letter-spacing: 0.4em; }
+    letter-spacing: 0.45rem; }
   #wordings .wording {
     display: table-cell;
     vertical-align: middle; }
@@ -2734,7 +2736,7 @@ video.background {
   #wordings .wording-body.background--dark {
     border-color: #F2F2F2; }
   #wordings .wording-footer {
-    font-size: 0.8rem;
+    font-size: 0.1rem;
     text-transform: uppercase;
     font-family: AltBold, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-top: 18px solid #F2F2F2;
