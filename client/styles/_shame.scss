@@ -29,3 +29,172 @@
         text-align: center;
     }
 }
+
+// question css
+.questions {
+    @include clearfix;
+    position: absolute;
+    bottom: x(0); /* @todo: magic number. replace immediately */
+    left: x(0);
+    height: r(20rem);
+    width: r(16rem);
+    background-color: $yellow;
+    overflow: hidden;
+
+    .page-selectors {
+        position: absolute;
+        bottom: -5px;
+        width: 100%;
+
+        .active{
+            color: $red;
+        }
+    }
+    
+    .related {
+        margin-top: 10px;
+    }
+
+    .related-page{
+        padding: 8px 20px;
+        line-height: 1rem;
+        
+        .active {
+            color: $red;
+        }
+
+        a{
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            line-height: inherit;
+        }  
+    }
+    
+    .related-toggler {
+        display: block;
+        height: x(0.5);
+        width: r(16.375rem);
+        position: absolute;
+        top: 125px; /* (width / 2) - height */
+        right: -125px; /* ((width / 2) - height) * -1 */
+        transform: rotate(-90deg);
+        overflow: hidden;
+        text-transform: uppercase;
+
+        p {
+            font-size: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .toggler-text {
+            @include clearfix;
+            @include transition(margin-top .5s ease-out .3s);
+            height: x(0.5);
+            margin: 0;
+
+            .toggler-text-icon{
+                display: block;
+                width: 14px;
+                height: x(0.5);
+                padding: 0 1px;
+                float: left;
+                background-color: $black;
+            }
+
+            .toggler-text-span{
+                height: x(0.5);
+                display: block;
+                line-height: x(0.5);
+                padding-left: x(0.75);
+            }
+
+            &:last-of-type {
+                .icon {
+                    transform: rotate(180deg);
+                }
+            }
+            .icon {
+                position: relative;
+                top: -3px;
+                width: x(0.5);
+                height: x(0.5);
+            }
+        }
+    }
+
+    &.active {
+        left: 0;
+
+        .related-toggler .toggler-text:first-child { margin-top: -12px; }
+    }
+
+    .related-paginations {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+#qtexts {
+    @include clearfix;
+    float: right;
+    max-width: 40%;
+    height: 100%;
+    min-height: 100%;
+    display: table;
+    color: $black;
+    
+    
+    h1 {
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+            text-transform: inherit;
+            color:inherit;
+            letter-spacing: 0.05em;
+    }
+
+    p {
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+            text-transform: inherit;
+            color:inherit;
+            letter-spacing: 0.1em;
+    }
+
+    .qtext {
+        @include clearfix;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+    
+    .qtext-headers {
+        background-color: $black;
+        color: $white;
+
+        .qtext-header {
+            font-size: r(0.750rem);
+            margin-left: 10px;
+        }
+    }
+
+    .qtext-head {
+        font-size: r(1.80rem);
+        line-height: r(2rem);
+        padding: 0 0 x(0.75) 0;
+        text-transform: uppercase;       
+    }
+    
+    .qtext-body {
+        border-top: 1px solid white;
+        padding: x(0.75) 0;
+        font-size: r(1rem);
+        line-height: 1rem;
+    }
+
+    .qtext-footer {
+        border-top: 2px solid $black;
+        padding: x(0.75) 0;
+    }
+}

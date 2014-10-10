@@ -3223,3 +3223,145 @@ video.background {
     font-family: 'Helvetica Neue', Helvetical, Arial, sans-serif;
     font-weight: 400;
     text-align: center; }
+
+.questions {
+  position: absolute;
+  bottom: 0rem;
+  /* @todo: magic number. replace immediately */
+  left: 0rem;
+  height: 20rem;
+  width: 16rem;
+  background-color: #FC0;
+  overflow: hidden; }
+  .questions:before, .questions:after {
+    content: " ";
+    display: table; }
+  .questions:after {
+    clear: both; }
+  .questions .page-selectors {
+    position: absolute;
+    bottom: -5px;
+    width: 100%; }
+    .questions .page-selectors .active {
+      color: #F00; }
+  .questions .related {
+    margin-top: 10px; }
+  .questions .related-page {
+    padding: 8px 20px;
+    line-height: 1rem; }
+    .questions .related-page .active {
+      color: #F00; }
+    .questions .related-page a {
+      font-size: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      line-height: inherit; }
+  .questions .related-toggler {
+    display: block;
+    height: 0.75rem;
+    width: 16.375rem;
+    position: absolute;
+    top: 125px;
+    /* (width / 2) - height */
+    right: -125px;
+    /* ((width / 2) - height) * -1 */
+    -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    overflow: hidden;
+    text-transform: uppercase; }
+    .questions .related-toggler p {
+      font-size: 0.5rem;
+      font-weight: bold; }
+    .questions .related-toggler .toggler-text {
+      -webkit-transition: margin-top 0.5s ease-out 0.3s;
+              transition: margin-top 0.5s ease-out 0.3s;
+      height: 0.75rem;
+      margin: 0; }
+      .questions .related-toggler .toggler-text:before, .questions .related-toggler .toggler-text:after {
+        content: " ";
+        display: table; }
+      .questions .related-toggler .toggler-text:after {
+        clear: both; }
+      .questions .related-toggler .toggler-text .toggler-text-icon {
+        display: block;
+        width: 14px;
+        height: 0.75rem;
+        padding: 0 1px;
+        float: left;
+        background-color: #000; }
+      .questions .related-toggler .toggler-text .toggler-text-span {
+        height: 0.75rem;
+        display: block;
+        line-height: 0.75rem;
+        padding-left: 1.125rem; }
+      .questions .related-toggler .toggler-text:last-of-type .icon {
+        -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+                transform: rotate(180deg); }
+      .questions .related-toggler .toggler-text .icon {
+        position: relative;
+        top: -3px;
+        width: 0.75rem;
+        height: 0.75rem; }
+  .questions.active {
+    left: 0; }
+    .questions.active .related-toggler .toggler-text:first-child {
+      margin-top: -12px; }
+  .questions .related-paginations {
+    position: absolute;
+    bottom: 0; }
+
+#qtexts {
+  float: right;
+  max-width: 40%;
+  height: 100%;
+  min-height: 100%;
+  display: table;
+  color: #000; }
+  #qtexts:before, #qtexts:after {
+    content: " ";
+    display: table; }
+  #qtexts:after {
+    clear: both; }
+  #qtexts h1 {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    text-transform: inherit;
+    color: inherit;
+    letter-spacing: 0.05em; }
+  #qtexts p {
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    text-transform: inherit;
+    color: inherit;
+    letter-spacing: 0.1em; }
+  #qtexts .qtext {
+    display: table-cell;
+    vertical-align: bottom; }
+    #qtexts .qtext:before, #qtexts .qtext:after {
+      content: " ";
+      display: table; }
+    #qtexts .qtext:after {
+      clear: both; }
+  #qtexts .qtext-headers {
+    background-color: #000;
+    color: #F2F2F2; }
+    #qtexts .qtext-headers .qtext-header {
+      font-size: 0.75rem;
+      margin-left: 10px; }
+  #qtexts .qtext-head {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    padding: 0 0 1.125rem 0;
+    text-transform: uppercase; }
+  #qtexts .qtext-body {
+    border-top: 1px solid white;
+    padding: 1.125rem 0;
+    font-size: 1rem;
+    line-height: 1rem; }
+  #qtexts .qtext-footer {
+    border-top: 2px solid #000;
+    padding: 1.125rem 0; }
