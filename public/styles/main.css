@@ -3365,3 +3365,6 @@ video.background {
   #qtexts .qtext-footer {
     border-top: 2px solid #000;
     padding: 1.125rem 0; }
+
+.mgr-top {
+  margin-top: 150px; }
