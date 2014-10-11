@@ -42,7 +42,7 @@
     background-color: $yellow;
     overflow: hidden;
     position: relative;
-    padding: 0;
+    padding: 0 x(1);
     height: r(1.5rem);
     border-left: 2px solid $black;
     border-right: 2px solid $black;
@@ -55,7 +55,7 @@
         line-height: r(1rem);
         position: relative;
         margin: 0;
-        padding: x(.5) x(1) 0 x(1);
+        padding: x(.5) 0;
         display: block;
 
         &:before{
@@ -131,4 +131,17 @@
             object { transform: rotate(0deg); }
         }
     }
+}
+
+
+#big-video-wrap {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+
 }

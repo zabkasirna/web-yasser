@@ -14,14 +14,20 @@ module.exports = {
                 _svgDoc = _svgObj.contentDocument;
                 _navEl  = _svgDoc.querySelector('.navigation-svg');
 
+                if($el.hasClass('active')) _navEl.setAttribute('class', 'navigation-svg active');
+
                 $el.hover(
                     function() {
-                        $(this).toggleClass('hovered');
-                        _navEl.setAttribute('class', 'navigation-svg hovered');
+                        if(!$(this).hasClass('active')) {
+                            $(this).toggleClass('hovered');
+                            _navEl.setAttribute('class', 'navigation-svg hovered');
+                        }
                     },
                     function() {
-                        $(this).toggleClass('hovered');
-                        _navEl.setAttribute('class', 'navigation-svg');
+                        if(!$(this).hasClass('active')) {
+                            $(this).toggleClass('hovered');
+                            _navEl.setAttribute('class', 'navigation-svg');
+                        }
                     }
                 );
             });

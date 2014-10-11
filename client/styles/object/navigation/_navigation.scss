@@ -53,7 +53,7 @@
             line-height: 2.25rem;
             height: 36px;
             margin-top: 6px;
-            margin-left: 12px;
+            // margin-left: 12px;
             pointer-events: none;
         }
 
@@ -88,6 +88,7 @@
         }
     }
 
+    .nav-1.active .nav-1-span,
     .nav-1.hovered .nav-1-span { transform: translate(-18px, 18px); }
 
     .open .nav-2 {
