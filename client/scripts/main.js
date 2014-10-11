@@ -17,6 +17,8 @@
     ,   uiTouch      = require('./module/ui/ui-touch')
     ;
 
+    var SlimScroll = require('./module/ui/jQuery-slimScroll-browserify')();
+
     // Dynamic color
     setTimeout(function() { uiColor.init(); }, 100);
 
@@ -93,6 +95,16 @@
     $('.contact-credit-toggler').on('click', function(e) {
         e.preventDefault();
         updateInfoCredit();
+    });
+
+    $('.question').slimScroll({
+        height: '264px',
+        size: '4px',
+        color: '#000',
+        opacity: '1',
+        borderRadius: 0,
+        alwaysVisible: true,
+        distance: 0
     });
 
     uiTouch.init();

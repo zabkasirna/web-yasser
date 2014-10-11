@@ -1,0 +1,102 @@
+.questions {
+    @include clearfix;
+    position: absolute;
+    bottom: x(1); /* @todo: magic number. replace immediately */
+    left: 0;
+    height: x(12);
+    max-height: x(12);
+    width: x(10);
+    padding: x(.5) 0 x(.5) x(.5);
+    overflow: hidden;
+    background-color: $yellow;
+
+    .question {
+        max-height: 100%;
+        width: 100%;
+        overflow: scroll;
+    }
+
+    .question-list {
+        padding: 0 x(1) 0 x(.5);
+        margin: 0 0 x(.5) 0;
+        line-height: 1rem;
+        
+        .active { color: $red; }
+
+        .question-link {
+            font-size: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            line-height: inherit;
+        }  
+    }
+
+    .related-paginations {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+#qtexts {
+    @include clearfix;
+    float: right;
+    max-width: 40%;
+    height: 100%;
+    min-height: 100%;
+    display: table;
+    color: $black;
+    
+    
+    h1 {
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+            text-transform: inherit;
+            color:inherit;
+            letter-spacing: 0.05em;
+    }
+
+    p {
+            font-size: inherit;
+            line-height: inherit;
+            margin: 0;
+            text-transform: inherit;
+            color:inherit;
+            letter-spacing: 0.1em;
+    }
+
+    .qtext {
+        @include clearfix;
+        display: table-cell;
+        vertical-align: bottom;
+    }
+    
+    .qtext-headers {
+        background-color: $black;
+        color: $white;
+
+        .qtext-header {
+            font-size: r(0.750rem);
+            margin-left: 10px;
+        }
+    }
+
+    .qtext-head {
+        font-size: r(1.80rem);
+        line-height: r(2rem);
+        padding: 0 0 x(0.75) 0;
+        text-transform: uppercase;       
+    }
+    
+    .qtext-body {
+        border-top: 1px solid white;
+        padding: x(0.75) 0;
+        font-size: r(1rem);
+        line-height: 1rem;
+    }
+
+    .qtext-footer {
+        border-top: 2px solid $black;
+        padding: x(0.75) 0;
+    }
+}
