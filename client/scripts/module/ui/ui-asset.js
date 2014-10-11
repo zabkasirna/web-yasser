@@ -47,11 +47,14 @@ module.exports = {
 
         console.log(BVSources);
 
-        var BV = new $.BigVideo();
-        BV.init({ useFlashForFirefox: false });
+        var BV = new $.BigVideo({
+            useFlashForFirefox: false
+        });
+        BV.init();
         BV.show(BVSources, {
             ambient: true
             , altSource: 'assets/videos/Y.webm'
+            , techOrder: ['html5']
         });
 
         BV.getPlayer().on('loadeddata', function() {
