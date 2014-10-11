@@ -89,20 +89,18 @@
     right: 0;
     top: x(2);
     max-width: 50%;
-    max-height: 95%;   
-    width: 100%;
+    min-width: x(25);
+    max-height: 95%;
     margin: 0;
-    padding: 0 x(1);
+    padding: 0 x(1) 0 0;
     overflow-y: scroll;
     
 
     .neu-page-head {
-        // background-color: $black;
         width: 100%;
         margin: 0 0 x(1) 0;
 
         .neu-title {
-            // color: $white;
             text-transform: uppercase;
         }
     }

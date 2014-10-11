@@ -49,12 +49,14 @@
     border-bottom: 2px solid $black;
 
     p:not(.deco) {
+        z-index: 211;
         color: $black;
         font-size: 11px;
         line-height: r(1rem);
         position: relative;
         margin: 0;
         padding: x(.5) x(1) 0 x(1);
+        display: block;
 
         &:before{
             content: "";
@@ -72,6 +74,7 @@
         display: block;
         width: 100%;
         height: x(1);
+        z-index: 212;
 
         .deco,
         .home-hero-toggler {

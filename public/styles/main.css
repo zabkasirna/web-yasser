@@ -2599,12 +2599,14 @@ video.background {
   .home-hero-body:after {
     clear: both; }
   .home-hero-body p:not(.deco) {
+    z-index: 211;
     color: #000;
     font-size: 11px;
     line-height: 1rem;
     position: relative;
     margin: 0;
-    padding: 0.75rem 1.5rem 0 1.5rem; }
+    padding: 0.75rem 1.5rem 0 1.5rem;
+    display: block; }
     .home-hero-body p:not(.deco):before {
       content: "";
       display: block;
@@ -2616,7 +2618,8 @@ video.background {
   .home-hero-body .home-hero-togglers {
     display: block;
     width: 100%;
-    height: 1.5rem; }
+    height: 1.5rem;
+    z-index: 212; }
     .home-hero-body .home-hero-togglers:before, .home-hero-body .home-hero-togglers:after {
       content: " ";
       display: table; }
@@ -3007,10 +3010,10 @@ video.background {
   right: 0;
   top: 3rem;
   max-width: 50%;
+  min-width: 37.5rem;
   max-height: 95%;
-  width: 100%;
   margin: 0;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 0 0;
   overflow-y: scroll; }
   #neu-page .neu-page-head {
     width: 100%;
