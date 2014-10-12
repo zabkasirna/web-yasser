@@ -41,8 +41,10 @@ $page-navigation-height: x(1);
     border: 1px solid $black;
 
     // Dynamic value
-    &.background--dark { border-color: $white; }
-    &.background--light { border-color: $black; }
+    .dark &,
+    &.background--light { border-color: $white; }
+    .light &,
+    &.background--dark  { border-color: $black; }
 }
 
 .page-navigation {
@@ -192,6 +194,11 @@ $info-btns-width: x(7);
             background-color: $yellow;
             border-right: 1px solid $black;
             white-space: nowrap;
+
+            .dark &,
+            &.background--light { border-right-color: $white; }
+            .light &,
+            &.background--dark  { border-right-color: $black; }
         }
 
         .info-btn-toggler:nth-child(1) {}
@@ -247,6 +254,11 @@ $info-btns-width: x(7);
         padding: 0 4px;
         font-size: 10px;
         text-align: center;
+
+        .dark &,
+        &.background--light { color: $black; }
+        .light &,
+        &.background--dark  { color: $white; }
 
         &.active,
         &:hover { background-color: $yellow; color: $black; }

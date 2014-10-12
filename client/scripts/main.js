@@ -20,7 +20,7 @@
     var SlimScroll = require('./module/ui/jQuery-slimScroll-browserify')();
 
     // Dynamic color
-    setTimeout(function() { uiColor.init(); }, 100);
+    /*setTimeout(function() { uiColor.init(); }, 100);*/
 
     // Background
     if ($('.background').length) uiAsset.init($('.background'));

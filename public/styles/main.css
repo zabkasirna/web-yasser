@@ -2148,12 +2148,6 @@ video.background {
         -webkit-transition: -webkit-transform 0.1s ease-out 0.8s;
                 transition: transform 0.1s ease-out 0.8s; }
 
-#navigation.background--light {
-  color: #000; }
-
-#navigation.background--dark {
-  color: #F2F2F2; }
-
 .page-navigations {
   position: absolute;
   left: 1.5rem;
@@ -2194,9 +2188,9 @@ video.background {
     display: table; }
   .page-navigation:after {
     clear: both; }
-  .page-navigation.background--dark {
+  .dark .page-navigation, .page-navigation.background--light {
     border-color: #F2F2F2; }
-  .page-navigation.background--light {
+  .light .page-navigation, .page-navigation.background--dark {
     border-color: #000; }
 
 .has-infos .page-navigation {
@@ -2315,6 +2309,10 @@ video.background {
     background-color: #FC0;
     border-right: 1px solid #000;
     white-space: nowrap; }
+    .dark .info-btns .info-btn-togglers .info-btn-toggler, .info-btns .info-btn-togglers .info-btn-toggler.background--light {
+      border-right-color: #F2F2F2; }
+    .light .info-btns .info-btn-togglers .info-btn-toggler, .info-btns .info-btn-togglers .info-btn-toggler.background--dark {
+      border-right-color: #000; }
   .info-btns .info-btn-togglers .info-btn-toggler:nth-child(2) {
     margin-top: 0;
     border-top: 1px solid #000; }
@@ -2361,6 +2359,10 @@ video.background {
   padding: 0 4px;
   font-size: 10px;
   text-align: center; }
+  .dark .page-selectors .page-selector-link, .page-selectors .page-selector-link.background--light {
+    color: #000; }
+  .light .page-selectors .page-selector-link, .page-selectors .page-selector-link.background--dark {
+    color: #F2F2F2; }
   .page-selectors .page-selector-link.active, .page-selectors .page-selector-link:hover {
     background-color: #FC0;
     color: #000; }
@@ -2447,10 +2449,10 @@ video.background {
   top: 0;
   width: 100%;
   height: 1px;
-  background-color: #F2F2F2; }
-  .thumb-deco.background--light {
+  background-color: #000; }
+  .dark .thumb-deco, .thumb-deco.background--light {
     background-color: #000; }
-  .thumb-deco.background--dark {
+  .light .thumb-deco, .thumb-deco.background--dark {
     background-color: #F2F2F2; }
 
 .thumb-groups {

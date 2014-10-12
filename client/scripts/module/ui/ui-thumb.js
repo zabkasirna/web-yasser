@@ -9,7 +9,7 @@ module.exports = {
         ,   isSwap         = false
         ;
 
-        var hasNeu = el.hasClass('has-neu'); console.log('hasNeu' ,hasNeu);
+        var hasNeu = el.hasClass('has-neu'); /*console.log('hasNeu' ,hasNeu);*/
 
         var _thumbN = $thumbs.length
         ,   _thumbGroupsLimit = hasNeu ? 4 : 6

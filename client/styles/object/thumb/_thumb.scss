@@ -21,10 +21,12 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
     height: 1px;
 
     // default value, will be replaced dynamically
-    background-color: $white;
+    background-color: $black;
 
     // Dynamic value
+    .dark &,
     &.background--light { background-color: $black; }
+    .light &,
     &.background--dark  { background-color: $white; }
 }
 
