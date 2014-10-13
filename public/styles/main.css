@@ -2189,9 +2189,9 @@ video.background {
   .page-navigation:after {
     clear: both; }
   .dark .page-navigation, .page-navigation.background--light {
-    border-color: #F2F2F2; }
-  .light .page-navigation, .page-navigation.background--dark {
     border-color: #000; }
+  .light .page-navigation, .page-navigation.background--dark {
+    border-color: #F2F2F2; }
 
 .has-infos .page-navigation {
   width: 35.25rem; }
@@ -2310,9 +2310,9 @@ video.background {
     border-right: 1px solid #000;
     white-space: nowrap; }
     .dark .info-btns .info-btn-togglers .info-btn-toggler, .info-btns .info-btn-togglers .info-btn-toggler.background--light {
-      border-right-color: #F2F2F2; }
-    .light .info-btns .info-btn-togglers .info-btn-toggler, .info-btns .info-btn-togglers .info-btn-toggler.background--dark {
       border-right-color: #000; }
+    .light .info-btns .info-btn-togglers .info-btn-toggler, .info-btns .info-btn-togglers .info-btn-toggler.background--dark {
+      border-right-color: #F2F2F2; }
   .info-btns .info-btn-togglers .info-btn-toggler:nth-child(2) {
     margin-top: 0;
     border-top: 1px solid #000; }
