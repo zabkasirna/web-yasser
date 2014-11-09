@@ -12,7 +12,7 @@ module.exports = {
         var hasNeu = el.hasClass('has-neu'); /*console.log('hasNeu' ,hasNeu);*/
 
         var _thumbN = $thumbs.length
-        ,   _thumbGroupsLimit = hasNeu ? 4 : 6
+        ,   _thumbGroupsLimit = hasNeu ? 3 : 6
         ,   _thumbGroupN = (_thumbN > _thumbGroupsLimit) ? Math.ceil(_thumbN / _thumbGroupsLimit) : 1
         ,   _thumbStart = 0
         ,   _thumbEnd = _thumbGroupN
@@ -43,9 +43,9 @@ module.exports = {
         });
 
         // dynamically create page-selector
-        var _pageSelectorPrevTemplate = '<li class="page-selector prev"><a data-slide class="page-selector-link" href="javascript:void(0)"><object data="assets/images/icon/arrow-black.svg" type="image/svg+xml" class="icon">&lt;</object></a></li>'
+        var _pageSelectorPrevTemplate = '<li class="page-selector prev"><a data-slide class="page-selector-link" href="javascript:void(0)"><div class="icon"><svg x="0px" y="0px" width="24px" height="12px" viewBox="10 0 24 24" xml:space="preserve"><path class="f" d="M19.1,12.9c-0.6-0.6-1.5-0.6-2.1,0l-3.4,3.4V4c0-0.8-0.7-1.5-1.5-1.5S10.5,3.2,10.5,4v12.4l-3.4-3.4c-0.6-0.6-1.5-0.6-2.1,0s-0.6,1.5,0,2.1l6,6c0.1,0.1,0.3,0.3,0.5,0.3c0,0,0,0,0,0c0.2,0.1,0.4,0.1,0.5,0.1s0.4,0,0.5-0.1c0,0,0,0,0,0c0.2-0.1,0.4-0.2,0.5-0.3l6-6C19.6,14.5,19.6,13.5,19.1,12.9z"/></svg></div></a></li>'
         ,   _pageSelectorNumTemplate  = '<li class="page-selector"><a data-slide class="page-selector-link recolor" href="javascript:void(0)"></a></li>'
-        ,   _pageSelectorNextTemplate = '<li class="page-selector next"><a data-slide class="page-selector-link" href="javascript:void(0)"><object data="assets/images/icon/arrow-black.svg" type="image/svg+xml" class="icon">&gt;</object></a></li>'
+        ,   _pageSelectorNextTemplate = '<li class="page-selector next"><a data-slide class="page-selector-link" href="javascript:void(0)"><div class="icon"><svg x="0px" y="0px" width="24px" height="12px" viewBox="10 0 24 24" xml:space="preserve"><path class="f" d="M19.1,12.9c-0.6-0.6-1.5-0.6-2.1,0l-3.4,3.4V4c0-0.8-0.7-1.5-1.5-1.5S10.5,3.2,10.5,4v12.4l-3.4-3.4c-0.6-0.6-1.5-0.6-2.1,0s-0.6,1.5,0,2.1l6,6c0.1,0.1,0.3,0.3,0.5,0.3c0,0,0,0,0,0c0.2,0.1,0.4,0.1,0.5,0.1s0.4,0,0.5-0.1c0,0,0,0,0,0c0.2-0.1,0.4-0.2,0.5-0.3l6-6C19.6,14.5,19.6,13.5,19.1,12.9z"/></svg></div></a></li>'
         ;
 
         if ($pageSelectors.length) {

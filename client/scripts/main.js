@@ -50,7 +50,8 @@
         $('#viewers').remove();
     });
 
-    var createViewer = function() {
+    var createViewer = function(src) {
+
         var $backgroundEl = $('.background')
         ,   imgSrc = $backgroundEl.attr('src')
         ,   viewersTemplate =
@@ -69,12 +70,12 @@
             }, 1000);
         }
 
-        if ($('a[data-tool="image"')) {
+        if ($('.page-tool-btn[data-tool="image"')) {
             $('body').append(viewersTemplate);
 
             if($('#viewers').length) {
                 $('#viewers').cropit({
-                    imageState: { src: imgSrc },
+                    imageState: { src: src },
                     onImageLoaded: removePre
                 });
             }
@@ -82,7 +83,7 @@
     };
 
     $('.page-tool-btn[data-tool="image"]')
-        .on('click', function(e) { createViewer(); });
+        .on('click', function(e) { createViewer($(this).data('src')); });
 
     // Shame
     var isOpen = false;

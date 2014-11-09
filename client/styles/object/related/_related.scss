@@ -1,13 +1,15 @@
 .relateds {
     @include clearfix;
-    @include transition(left .5s ease-out);
+    @include transition(right .5s ease-out);
     position: absolute;
-    left: r(-11.25rem);
-    bottom: x(3); /* @todo: magic number. replace immediately */
+    right: r(-11.25rem);
+    // bottom: x(3); /* @todo: magic number. replace immediately */
+    bottom: 75px; /* @todo: magic number. replace immediately */
     height: r(16.375rem);
     width: r(12rem);
     background-color: $yellow;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
 
     .page-selectors {
         position: absolute;
@@ -21,7 +23,7 @@
     }
 
     .related-page{
-        padding: 4px 12px;
+        padding: 4px 24px;
         line-height: 1rem;
         a{
             font-size: 0.5rem;
@@ -37,7 +39,7 @@
         width: r(16.375rem);
         position: absolute;
         top: 125px; /* (width / 2) - height */
-        right: -125px; /* ((width / 2) - height) * -1 */
+        left: -125px; /* ((width / 2) - height) * -1 */
         transform: rotate(-90deg);
         overflow: hidden;
         text-transform: uppercase;
@@ -67,6 +69,7 @@
                 display: block;
                 line-height: x(0.5);
                 padding-left: x(0.75);
+                letter-spacing: 0.5em;
             }
 
             &:last-of-type {
@@ -84,7 +87,7 @@
     }
 
     &.active {
-        left: 0;
+        right: 0;
 
         .related-toggler .toggler-text:first-child { margin-top: -12px; }
     }

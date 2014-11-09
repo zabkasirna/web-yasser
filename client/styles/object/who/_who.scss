@@ -1,7 +1,9 @@
 #wordings {
     @include clearfix;
     float: right;
-    max-width: 40%;
+    max-width: x(20);
+    min-width: x(20);
+    width: x(20);
     height: 100%;
     min-height: 100%;
     display: table;
@@ -20,11 +22,12 @@
     p {
             font-size: inherit;
             line-height: inherit;
-            margin: 0;
             text-transform: inherit;
             color:inherit;
-            letter-spacing: 0.1em;
+            letter-spacing: inherit;
     }
+
+    p:first-child { margin: 0; }
 
     quote {
             font-size: 7.5px;
@@ -32,13 +35,14 @@
             margin: 0;
             text-transform: inherit;
             color:inherit;
-            letter-spacing: 0.45rem;
+            letter-spacing: r(0.441rem);
         }
 
     .wording {
         @include clearfix;
         display: table-cell;
-        vertical-align: middle;
+        vertical-align: top;
+        padding-top: x(6);
     }
     
     .wording-head {
@@ -51,8 +55,9 @@
     .wording-body {
         border-top: 1px solid white;
         padding: x(0.75) 0;
-        font-size: r(0.750rem);
-        line-height: 1rem;
+        font-size: r(0.75rem);
+        line-height: x(1);
+        letter-spacing: 0.15em;
     }
 
     .wording-body, .wording-head, .wording-footer {

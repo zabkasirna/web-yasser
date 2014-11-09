@@ -106,9 +106,9 @@
     }
 
     p, a {
-        font-size: 12px;
+        font-size: r(0.75rem);
         line-height: x(1);
-        letter-spacing: 0.05em;
+        letter-spacing: 0.15em;
         color: inherit;
 
         &:last-child { margin-bottom: 0; }

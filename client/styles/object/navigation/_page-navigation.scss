@@ -29,7 +29,7 @@ $page-navigation-height: x(1);
     @include clearfix;
     @include box-sizing(content-box);
 
-    position: relative;
+    position: absolute;
     height: $page-navigation-height;
 
     font-size: r(.75rem);
@@ -39,6 +39,11 @@ $page-navigation-height: x(1);
 
     // Default value, will be replaced dynamically
     border: 1px solid $black;
+
+    // Dynamic position
+    &[data-position='left']   { left: 0;   margin-left: 0; }
+    &[data-position='middle'] { left: 50%; margin-left: x(-11.75); }
+    &[data-position='right']  { right: x(2);  margin-left: 0; }
 
     // Dynamic value
     .dark &,
@@ -243,8 +248,8 @@ $info-btns-width: x(7);
         pointer-events: none;
     }
 
-    .page-selector.prev .icon { transform: rotate(90deg); }
-    .page-selector.next .icon { transform: rotate(-90deg); }
+    .page-selector.prev .icon { transform: rotate(90deg); margin: 0 0 0 0; }
+    .page-selector.next .icon { transform: rotate(-90deg); margin: 0 0 0 4px; }
 
     .page-selector-link {
         display: block;
@@ -256,17 +261,20 @@ $info-btns-width: x(7);
         text-align: center;
 
         .dark &,
-        &.background--light { color: $black; }
+        &.background--light { color: $white; }
         .light &,
-        &.background--dark  { color: $white; }
+        &.background--dark  { color: $black; }
 
         &.active,
         &:hover { background-color: $yellow; color: $black; }
     }
 
-    &.background--light { color: $black; }
-    &.background--dark  { color: $white; }
+    // &.background--light { color: $black; }
+    // &.background--dark  { color: $white; }
 }
+
+.dark .page-selectors .page-selector-link .f { fill: $white; }
+.light .page-selectors .page-selector-link .f { fill: $black; }
 
 .page-infos {
 
@@ -296,8 +304,8 @@ $info-btns-width: x(7);
         padding: x(.5) x(.5);
         font-family: $ff-sans-regular;
         color: $white;
-        letter-spacing: 0.20em;
-        font-size: r(0.70rem);
+        letter-spacing: 0.15em;
+        font-size: r(0.75rem);
 
         p, a, li {
             color: inherit;
@@ -310,8 +318,8 @@ $info-btns-width: x(7);
         padding: x(.5);
         text-transform: uppercase;
 
-        p { font-family: $ff-sans-bold; font-size: 12px; }
-        a { text-decoration: underline; font-size: 11px; }
+        p { font-family: $ff-sans-bold; font-size: r(0.625rem); letter-spacing: 0.5em; }
+        a { text-decoration: underline; font-size: r(0.625rem); letter-spacing: 0.5em; }
 
         p, a {
             margin: 0;

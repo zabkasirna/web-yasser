@@ -1,12 +1,12 @@
 #parallaxes {
     @include mq(min-width 800px) {
-        width: r(50rem);
-        height: r(37.5rem);
+        width: x(42);
+        height: x(31.5);
         position: absolute;
         top: 50%;
         left: 50%;
-        margin: r(-18.75rem) 0 0 r(-25rem);
-        // background-color: #FFF;
+        margin: x(-15.75) 0 0 x(-21);
+        z-index: -1;
     }
     @include mq(max-width 799px) { display: none; }
 

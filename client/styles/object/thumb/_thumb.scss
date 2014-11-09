@@ -25,9 +25,9 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
 
     // Dynamic value
     .dark &,
-    &.background--light { background-color: $black; }
+    &.background--light { background-color: $white; }
     .light &,
-    &.background--dark  { background-color: $white; }
+    &.background--dark  { background-color: $black; }
 }
 
 .thumb-groups {
@@ -38,7 +38,6 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
     top: 1px;
     width: $thumb-groups-width;
     height: $thumb-groups-height;
-    overflow-y: scroll;
 }
 
 .thumb-group {
@@ -99,17 +98,20 @@ $thumb-groups-height: 100%; // default value, will be replaced dynamically
         color: inherit;
     }
 
-    .thumb-title,
+    // .thumb-title,
     .thumb-subtitle,
     .thumb-overview {
         // Dynamic styles, will be inherited
+        .light &,
         &.background--light { color: $black; }
+        .dark &,
         &.background--dark  { color: $white; }
 
         .thumb:hover & { color: $white; }
     }
 
     .thumb-title {
+        color: $white;
         font-family: $ff-sans-bold;
         font-weight: 700;
         margin: 0;

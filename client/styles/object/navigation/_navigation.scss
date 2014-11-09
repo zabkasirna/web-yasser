@@ -69,10 +69,10 @@
         .nav-2-list {
             transform-origin: 50% 0;
             @include transform(perspective(350px) rotateX(-90deg));
-            &:nth-child(n+1) { @include transition(transform 0.1s ease-out 0.8s); }
-            &:nth-child(n+2) { @include transition(transform 0.1s ease-out 0.6s); }
-            &:nth-child(n+3) { @include transition(transform 0.1s ease-out 0.4s); }
-            &:nth-child(n+4) { @include transition(transform 0.1s ease-out 0.2s); }
+            &:nth-child(n+1) { @include transition(transform 0.1s ease-out 0s); }
+            &:nth-child(n+2) { @include transition(transform 0.1s ease-out 0s); }
+            &:nth-child(n+3) { @include transition(transform 0.1s ease-out 0s); }
+            &:nth-child(n+4) { @include transition(transform 0.1s ease-out 0s); }
         }
         .nav-2-link {
             color: $white;

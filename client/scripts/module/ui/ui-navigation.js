@@ -41,8 +41,16 @@ module.exports = {
 
     toggle: function(parent, el) {
         el.each(function(index) {
-            if($(this).hasClass('open')) $(this).removeClass('open');
-            else $(this).addClass('open');
+            var $li = $(this).find('.nav-2-list');
+
+            if($(this).hasClass('open')) {
+                $li.each(function(i) { $(this).css('transition-delay', (($li.length - i) * 0.2) + 's'); });
+                $(this).removeClass('open');
+            }
+            else {
+                $li.each(function(i) { $(this).css('transition-delay', (i * 0.2) + 's'); });
+                $(this).addClass('open');
+            }
         });
 
         // el.toggleClass('open');
