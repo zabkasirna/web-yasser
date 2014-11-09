@@ -2254,7 +2254,7 @@ video.background {
   overflow-y: scroll;
   margin: 0 0 0 -1px; }
   .page-navigation .page-infos.is-active {
-    height: 18rem; }
+    height: 24rem; }
 .page-navigation #page-subnavigations {
   -webkit-transition: max-height 0.5s ease-out;
           transition: max-height 0.5s ease-out;
