@@ -2068,24 +2068,8 @@ video.background {
       width: 100%;
       height: 100%;
       font-size: 1rem;
-      position: relative; }
-    #navigation .nav-1 .nav-1-span {
-      -webkit-transition: -webkit-transform 0.3s ease-out;
-              transition: transform 0.3s ease-out;
-      -webkit-transform: translate(0, 0);
-          -ms-transform: translate(0, 0);
-              transform: translate(0, 0);
-      display: block;
-      position: absolute;
-      width: 6rem;
-      text-align: center;
-      line-height: 2.25rem;
-      height: 36px;
-      margin-top: 6px;
-      pointer-events: none; }
-    #navigation .nav-1 .nav-1-object {
-      margin-left: -1.5rem;
-      pointer-events: none; }
+      position: relative;
+      left: -1.5rem; }
   #navigation .nav-2 {
     -webkit-transition: max-height 0.3s linear 0.6s;
             transition: max-height 0.3s linear 0.6s;
@@ -3039,17 +3023,19 @@ video.background {
 #neu-page {
   position: absolute;
   right: 0;
-  top: 3rem;
+  top: 10rem;
   max-width: 50%;
   min-width: 37.5rem;
-  max-height: 95%;
+  max-height: 30rem;
+  height: 30rem;
   margin: 0;
   padding: 0 1.5rem 0 0;
   overflow-y: scroll; }
   #neu-page .neu-page-head {
     width: 100%;
-    margin: 0 0 1.5rem 0; }
+    margin: 0 0 0.75rem 0; }
     #neu-page .neu-page-head .neu-title {
+      font-size: 2rem;
       text-transform: uppercase; }
   #neu-page p, #neu-page a {
     font-size: 0.75rem;
@@ -3061,7 +3047,7 @@ video.background {
   #neu-page .neu-title {
     margin: 0; }
   #neu-page .neu-page-body {
-    margin: 0 0 1.5rem 0; }
+    margin: 0 0 0.75rem 0; }
     #neu-page .neu-page-body img {
       display: block;
       width: 100%;

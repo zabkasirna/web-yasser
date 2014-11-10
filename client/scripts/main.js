@@ -108,6 +108,17 @@
         distance: 0
     });
 
+    // $('#neu-page').slimScroll({
+    //     height: '480px',
+    //     size: '4px',
+    //     color: '#000',
+    //     opacity: '1',
+    //     borderRadius: 0,
+    //     alwaysVisible: true,
+    //     railVisible: true,
+    //     distance: 0
+    // });
+
     uiTouch.init();
 
 })(jQuery);

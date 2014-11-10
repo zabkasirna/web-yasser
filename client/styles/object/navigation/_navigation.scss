@@ -41,23 +41,8 @@
             height: 100%;
             font-size: r(1rem);
             position: relative;
+            left: r(-1.5rem);
         }
-
-        .nav-1-span {
-            @include transition(transform .3s ease-out);
-            transform: translate(0, 0);
-            display: block;
-            position: absolute;
-            width: 6rem;
-            text-align: center;
-            line-height: 2.25rem;
-            height: 36px;
-            margin-top: 6px;
-            // margin-left: 12px;
-            pointer-events: none;
-        }
-
-        .nav-1-object { margin-left: x(-1); pointer-events: none;}
     }
 
     .nav-2 {

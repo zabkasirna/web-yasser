@@ -10,9 +10,9 @@ module.exports = {
             ,   _navEl
             ;
 
-            _svgObj.addEventListener('load', function() {
-                _svgDoc = _svgObj.contentDocument;
-                _navEl  = _svgDoc.querySelector('.navigation-svg');
+            // _svgObj.addEventListener('load', function() {
+            //     _svgDoc = _svgObj.contentDocument;
+                 _navEl  = $el.find('.navigation-svg');
 
                 if($el.hasClass('active')) _navEl.setAttribute('class', 'navigation-svg active');
 
@@ -20,17 +20,17 @@ module.exports = {
                     function() {
                         if(!$(this).hasClass('active')) {
                             $(this).toggleClass('hovered');
-                            _navEl.setAttribute('class', 'navigation-svg hovered');
+                            _navEl[0].setAttribute('class', 'navigation-svg hovered');
                         }
                     },
                     function() {
                         if(!$(this).hasClass('active')) {
                             $(this).toggleClass('hovered');
-                            _navEl.setAttribute('class', 'navigation-svg');
+                            _navEl[0].setAttribute('class', 'navigation-svg');
                         }
                     }
                 );
-            });
+            // });
 
             $(this).on('click', function(e) {
                 e.preventDefault();
