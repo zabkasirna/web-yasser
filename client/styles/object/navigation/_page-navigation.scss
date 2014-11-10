@@ -47,9 +47,9 @@ $page-navigation-height: x(1);
 
     // Dynamic value
     .dark &,
-    &.background--light { border-color: $white; }
+    &.background--light { border-color: $black; }
     .light &,
-    &.background--dark  { border-color: $black; }
+    &.background--dark  { border-color: $white; }
 }
 
 .page-navigation {
@@ -201,9 +201,9 @@ $info-btns-width: x(7);
             white-space: nowrap;
 
             .dark &,
-            &.background--light { border-right-color: $white; }
+            &.background--light { border-right-color: $black; }
             .light &,
-            &.background--dark  { border-right-color: $black; }
+            &.background--dark  { border-right-color: $white; }
         }
 
         .info-btn-toggler:nth-child(1) {}
